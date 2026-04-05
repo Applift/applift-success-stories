@@ -1,0 +1,93 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Applift brand blue */
+  --ifm-color-primary: #0056d0;
+  --ifm-color-primary-dark: #004db8;
+  --ifm-color-primary-darker: #0048ad;
+  --ifm-color-primary-darkest: #003b8e;
+  --ifm-color-primary-light: #1a66d6;
+  --ifm-color-primary-lighter: #2a71da;
+  --ifm-color-primary-lightest: #4d8ce3;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Success Stories page tokens */
+  --ss-bg: #f9f9ff;
+  --ss-surface: #f9f9ff;
+  --ss-surface-container: #e7eeff;
+  --ss-surface-container-low: #f0f3ff;
+  --ss-surface-container-high: #dee8ff;
+  --ss-surface-lowest: #ffffff;
+  --ss-card-bg: #ffffff;
+  --ss-text-primary: #111c2d;
+  --ss-text-secondary: #424655;
+  --ss-text-muted: #727787;
+  --ss-outline-variant: #c2c6d8;
+  --ss-border-radius-card: 12px;
+  --ss-border-radius-pill: 9999px;
+  --ss-border-radius-btn: 8px;
+  --ss-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --ss-font-display: 'Inter', sans-serif;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #b2c5ff;
+  --ifm-color-primary-dark: #93adf7;
+  --ifm-color-primary-darker: #83a1f5;
+  --ifm-color-primary-darkest: #638efe;
+  --ifm-color-primary-light: #c4d3ff;
+  --ifm-color-primary-lighter: #d0dbff;
+  --ifm-color-primary-lightest: #dae2ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ss-bg: #111c2d;
+  --ss-surface: #111c2d;
+  --ss-surface-container: #1a2840;
+  --ss-surface-container-low: #152235;
+  --ss-surface-container-high: #243552;
+  --ss-surface-lowest: #0d1520;
+  --ss-card-bg: #1a2840;
+  --ss-text-primary: #e0e4f0;
+  --ss-text-secondary: #a8b0c4;
+  --ss-text-muted: #6b7594;
+  --ss-outline-variant: #3a4560;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ===== Story doc page styles ===== */
+.docs-doc-page [class*='docItemContainer'] {
+  max-width: 800px;
+}
+
+.docs-doc-page article h1 {
+  font-family: var(--ss-font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.docs-doc-page article h2 {
+  font-family: var(--ss-font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ss-outline-variant);
+}
+
+.docs-doc-page article ul {
+  line-height: 1.8;
+}
+
+.docs-doc-page article strong {
+  color: var(--ifm-color-primary);
+}
