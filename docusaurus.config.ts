@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Applift Consulting',
   tagline: 'Boutique software development firm',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -67,7 +67,7 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'Applift Consulting Logo',
-        src: 'logo/applift_logo.png',
+        src: 'img/logo.png',
       },
       items: [],
     },

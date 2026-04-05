@@ -1,36 +1,32 @@
 ---
 title: Zencity
-description: Building the AI-driven platform that helps local governments make better decisions using big data from millions of resident interactions.
+description: Full ownership of Zencity iOS application.
 sidebar_label: Zencity
-tags: [GovTech]
-hero_image: /img/success-stories/zencity.svg
-tech_stack: [React, Python, AI/ML]
-results: Millions of data points
+tags: [iOS]
+hero_image: /img/success-stories/zencity.png
 ---
 
 # Zencity
 
-Building the **AI-driven platform** that helps local governments make better decisions using big data from millions of resident interactions.
+Zencity reinvent the way local governments make decisions. Their platform helps cities understand their residents real needs and priorities, eliminating the guesswork from policymaking. Together with their partner-cities, they are setting a new standard for performance management in local government.
 
-## The Challenge
+We took full ownership of Zencity iOS App that is available in the App Store.
 
-Zencity needed to scale their platform to process and analyze massive volumes of resident feedback data, transforming unstructured interactions into actionable insights for city officials.
+The app supports push notifications as well as deep linking. Authorization and authentication are supported by Auth0.
 
-## Our Approach
+## Engineering Focus
 
-- Built and scaled the frontend using **React** for complex data visualizations
-- Integrated **AI/ML** models for sentiment analysis and trend detection
-- Developed dashboards presenting millions of data points in intuitive formats
-- Worked with **Python** backend services for data processing pipelines
+- Full iOS Ownership: Took complete ownership of the Zencity iOS application, managing the entire development lifecycle from feature planning through App Store delivery.
+- Push Notifications & Deep Linking: Implemented push notification infrastructure and deep linking to drive user engagement and enable seamless navigation within the app.
+- Authentication & Security: Integrated Auth0 for secure user authorization and authentication, ensuring reliable identity management for government stakeholders.
+- App Store Management: Maintained the production application on the App Store, handling releases, updates, and compliance with Apple's guidelines.
 
-## Tech Stack
+## Technical Stack
 
-- React
-- Python
-- AI/ML
+- **Platform**: iOS
+- **Authentication**: Auth0
+- **Features**: Push Notifications, Deep Linking
 
-## Results
+## The Impact
 
-- Processes **millions of resident data points**
-- Used by local governments across the US and globally
-- Real-time insights driving smarter city decisions
+By taking full ownership of the Zencity iOS application, we enabled their team to focus on their core platform while ensuring a polished, reliable mobile experience for government users. The app provides city officials with on-the-go access to resident insights, supporting smarter, data-driven decision-making in local government.

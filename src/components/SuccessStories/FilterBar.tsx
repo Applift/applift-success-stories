@@ -1,21 +1,21 @@
 import React from 'react';
 import clsx from 'clsx';
-import type { Industry } from './data';
-import { INDUSTRIES } from './data';
+import type { CaseStudy } from './data';
 import styles from '../../pages/index.module.css';
 
 interface FilterBarProps {
-  active: Industry | null;
-  onFilter: (industry: Industry | null) => void;
+  tags: string[];
+  active: string | null;
+  onFilter: (tag: string | null) => void;
 }
 
 export default function FilterBar({
+  tags,
   active,
   onFilter,
 }: FilterBarProps): React.JSX.Element {
   return (
     <div className={styles.filterBar}>
-      <div className="container">
         <ul className={styles.filterList} role="tablist">
           <li role="presentation">
             <button
@@ -30,23 +30,22 @@ export default function FilterBar({
               All
             </button>
           </li>
-          {INDUSTRIES.map((industry) => (
-            <li key={industry} role="presentation">
+          {tags.map((tag) => (
+            <li key={tag} role="presentation">
               <button
                 role="tab"
-                aria-selected={active === industry}
+                aria-selected={active === tag}
                 className={clsx(
                   styles.filterPill,
-                  active === industry && styles.filterPillActive,
+                  active === tag && styles.filterPillActive,
                 )}
-                onClick={() => onFilter(industry)}
+                onClick={() => onFilter(tag)}
               >
-                {industry}
+                {tag}
               </button>
             </li>
           ))}
         </ul>
-      </div>
     </div>
   );
 }

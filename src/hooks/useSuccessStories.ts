@@ -20,7 +20,7 @@ export function useSuccessStories(): CaseStudy[] {
   return stories.map((story) => ({
     slug: story.slug,
     clientName: story.title,
-    industry: (story.tags[0] ?? 'Other') as CaseStudy['industry'],
+    tags: story.tags ?? [],
     summary: story.description,
     heroImage: story.hero_image ? `${baseUrl}${story.hero_image}` : '',
     techStack: story.tech_stack,

@@ -1,36 +1,32 @@
 ---
 title: RiseUp
-description: Built iOS and Android apps from scratch for the financial wellness platform, establishing infrastructure and development standards for the mobile team.
+description: iOS and Android applications from scratch.
 sidebar_label: RiseUp
-tags: [FinTech]
-hero_image: /img/success-stories/riseup.svg
-tech_stack: [Swift, Kotlin, Mobile]
-results: Mobile apps from zero
+tags: [iOS, Android]
+hero_image: /img/success-stories/riseup.png
 ---
 
 # RiseUp
 
-Built iOS and Android apps **from scratch** for the financial wellness platform, establishing infrastructure and development standards for the mobile team.
+RiseUp helps customers improve their financial bottom line. Their unique method combines a smart digital platform, human support and a strong community to help customers change their story about money. And it works! RiseUp customers improve their cash flow by $340 per month within 3 months of using the product.
 
-## The Challenge
+We joined RiseUp to develop their mobile iOS and Android applications from scratch. Our team created the infrastructure and standards for future mobile development.
 
-RiseUp, a financial wellness startup, needed to go from zero to a fully functional mobile presence on both iOS and Android, with a solid foundation that their growing engineering team could build upon.
+Additionally, we assist in the hiring process and help build the RiseUp mobile team.
 
-## Our Approach
+## Engineering Focus
 
-- Built **iOS** (Swift) and **Android** (Kotlin) apps from the ground up
-- Established mobile architecture patterns and coding standards
-- Set up CI/CD infrastructure for the mobile team
-- Created comprehensive documentation to enable smooth team onboarding
+- Greenfield Mobile Development: Built both iOS and Android applications from the ground up, delivering a complete mobile product where none existed before.
+- Infrastructure & Standards: Established the mobile development infrastructure, architecture patterns, and coding standards to serve as the foundation for all future mobile work.
+- Team Building: Assisted in the hiring process and helped build RiseUp's internal mobile team, ensuring a smooth transition and long-term self-sufficiency.
+- Financial UX: Crafted a mobile experience that supports RiseUp's unique method of combining digital tools with human support to help users improve their financial health.
 
-## Tech Stack
+## Technical Stack
 
-- Swift
-- Kotlin
-- Mobile Architecture
+- **Platform**: iOS, Android
+- **Domain**: Mobile Application Development
+- **Process**: Greenfield Build, Team Augmentation
 
-## Results
+## The Impact
 
-- **Mobile apps launched from zero** on both platforms
-- Development standards established for the growing team
-- Scalable architecture supporting ongoing feature development
+Our partnership with RiseUp took their mobile presence from zero to fully operational on both iOS and Android. By building the apps from scratch and establishing the infrastructure and team to sustain them, we helped RiseUp deliver a product that measurably improves their customers' financial well-being—$340 per month within just 3 months.

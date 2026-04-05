@@ -1,34 +1,30 @@
 ---
-title: JotIt
-description: Developing the mobile note-taking application with rich text support, labels, and priority management features.
-sidebar_label: JotIt
-tags: [Productivity]
+title: Jotit
+description: Designed for Students. Built for iPad. Optimized for Apple Pencil.
+sidebar_label: Jotit
+tags: [iOS]
 hero_image: /img/success-stories/jotit.png
-tech_stack: [iOS]
-results: Full-featured app
 ---
 
-# JotIt
+# Jotit
 
-Developing the mobile **note-taking application** with rich text support, labels, and priority management features.
+As Jotit's development partner, we built their iPad application from the ground up, optimizing the experience for the classroom and beyond. The app features deep integration with Apple Pencil, giving students a natural, tactile way to express ideas, annotate, and interact with content—mirroring the flexibility of pen and paper, with the power of digital learning.
 
-## The Challenge
+Jotit also integrates seamlessly with leading LMS platforms like Canvas, and leverages Firebase for real-time data sync, authentication, and robust backend services.
 
-JotIt needed to build a polished, feature-rich mobile note-taking app that could compete with established players, with a focus on rich text editing, organization, and priority-based workflows.
+## Engineering Focus
 
-## Our Approach
+- Native iPad Development: Built a purpose-built iPad application from scratch, leveraging the full capabilities of the platform to deliver a fluid, responsive experience tailored for education.
+- Apple Pencil Integration: Engineered deep Apple Pencil support using PencilKit, delivering low-latency ink rendering, pressure sensitivity, and palm rejection—giving students a writing experience that feels as natural as pen on paper.
+- LMS Integration: Implemented seamless connectivity with Canvas and other leading Learning Management Systems, enabling students and educators to work within their existing academic workflows.
+- Real-Time Backend Services: Leveraged Firebase for real-time data synchronization, user authentication, and scalable cloud infrastructure to support a growing user base.
 
-- Built the app using **React Native** for cross-platform delivery
-- Implemented rich text editing with formatting, labels, and tags
-- Designed priority management features for task-oriented note-taking
-- Focused on performance and smooth animations for a native feel
+## Technical Stack
 
-## Tech Stack
+- **Platform**: iOS (iPad)
+- **Backend**: Firebase
+- **Integrations**: Canvas LMS
 
-- iOS
+## The Impact
 
-## Results
-
-- **Full-featured app** delivered on both iOS and Android
-- Rich text editing with labels and priorities
-- Smooth, native-quality user experience
+Our partnership with Jotit delivered a polished, classroom-ready iPad application that transforms the digital learning experience. By combining the precision of Apple Pencil with seamless LMS integration and a robust real-time backend, we helped Jotit launch a product that students and educators can rely on daily.

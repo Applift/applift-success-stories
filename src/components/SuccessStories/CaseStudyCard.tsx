@@ -13,7 +13,7 @@ export default function CaseStudyCard({
   return (
     <article
       className={styles.card}
-      aria-label={`${study.clientName} — ${study.industry}`}
+      aria-label={`${study.clientName} — ${study.tags.join(', ')}`}
     >
       <div className={styles.cardImageWrap}>
         <img
@@ -24,7 +24,11 @@ export default function CaseStudyCard({
         />
       </div>
       <div className={styles.cardBody}>
-        <span className={styles.industryLabel}>{study.industry}</span>
+        <div className={styles.tagList}>
+          {study.tags.map((tag) => (
+            <span key={tag} className={styles.tag}>{tag}</span>
+          ))}
+        </div>
         <h3 className={styles.clientName}>{study.clientName}</h3>
         <p className={styles.summary}>{study.summary}</p>
         <Link className={styles.readMore} to={study.link}>

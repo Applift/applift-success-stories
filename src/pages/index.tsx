@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import Layout from '@theme/Layout';
-import type { Industry } from '@site/src/components/SuccessStories/data';
 import { useSuccessStories } from '@site/src/hooks/useSuccessStories';
 import HeroSection from '@site/src/components/SuccessStories/HeroSection';
 import FilterBar from '@site/src/components/SuccessStories/FilterBar';
@@ -10,12 +9,18 @@ import styles from './index.module.css';
 
 export default function SuccessStories(): React.JSX.Element {
   const caseStudies = useSuccessStories();
-  const [activeFilter, setActiveFilter] = useState<Industry | null>(null);
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+
+  const allTags = useMemo(() => {
+    const set = new Set<string>();
+    caseStudies.forEach((s) => s.tags.forEach((t) => set.add(t)));
+    return Array.from(set).sort();
+  }, [caseStudies]);
 
   const filtered = useMemo(
     () =>
       activeFilter
-        ? caseStudies.filter((s) => s.industry === activeFilter)
+        ? caseStudies.filter((s) => s.tags.includes(activeFilter))
         : caseStudies,
     [activeFilter, caseStudies],
   );
@@ -25,16 +30,18 @@ export default function SuccessStories(): React.JSX.Element {
       title="Success Stories"
       description="Real results from real partnerships. Explore our case studies across FinTech, HealthTech, E-commerce, and more."
     >
-      <HeroSection />
-      <FilterBar active={activeFilter} onFilter={setActiveFilter} />
-      <main className={styles.gridSection}>
-        <div className={styles.cardGrid}>
-          {filtered.map((study) => (
-            <CaseStudyCard key={study.slug} study={study} />
-          ))}
-        </div>
-      </main>
-      <TestimonialSection />
+      <div className={styles.pageWrapper}>
+        <HeroSection />
+        <FilterBar tags={allTags} active={activeFilter} onFilter={setActiveFilter} />
+        <main className={styles.gridSection}>
+          <div className={styles.cardGrid}>
+            {filtered.map((study) => (
+              <CaseStudyCard key={study.slug} study={study} />
+            ))}
+          </div>
+        </main>
+        <TestimonialSection />
+      </div>
     </Layout>
   );
 }

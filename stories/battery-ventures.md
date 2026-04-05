@@ -1,36 +1,30 @@
 ---
 title: Battery Ventures
-description: Providing software development expertise for the global technology-focused investment firm with a 40-year track record.
+description: In-house tool designed to serve the VC investment team around the globe.
 sidebar_label: Battery Ventures
-tags: [Venture Capital]
-hero_image: /img/success-stories/battery-ventures.svg
-tech_stack: [React.js, Node.js, AWS]
-results: VC portfolio support
+tags: [React.js, Python, Node.js]
+hero_image: /img/success-stories/battery-ventures.png
 ---
 
 # Battery Ventures
 
-Providing software development expertise for the **global technology-focused investment firm** with a 40-year track record.
+Battery is a global, technology-focused investment firm.
 
-## The Challenge
+Our team is currently working on an in-house tool designed to serve the VC investment team around the globe. The project contains an enormous number of complex full stack features, as well as integrations with a large number of third-party SDKs and services.
 
-Battery Ventures, a leading global technology investment firm, needed a trusted development partner to build and maintain internal tooling and portfolio-facing applications.
+## Engineering Focus
 
-## Our Approach
+- Full-Stack Product Development: Building a complex in-house platform with a wide range of features tailored to the day-to-day workflows of a global investment team.
+- Third-Party Integrations: Connecting with a large number of external SDKs and services to centralize data and streamline decision-making for the investment team.
+- Global-Scale Architecture: Designing the platform to serve team members across multiple time zones with reliable performance and real-time data access.
+- Iterative Feature Delivery: Working closely with stakeholders to continuously ship new capabilities that support the evolving needs of the VC investment process.
 
-- Developed internal tools and applications using **React.js** and **Node.js**
-- Deployed and managed infrastructure on **AWS**
-- Worked closely with stakeholders to iterate on product requirements
-- Delivered solutions aligned with enterprise-grade security standards
+## Technical Stack
 
-## Tech Stack
+- **Frontend**: React.js
+- **Backend**: Node.js
+- **Cloud**: AWS
 
-- React.js
-- Node.js
-- AWS
+## The Impact
 
-## Results
-
-- Delivered tools supporting the **VC portfolio**
-- Reliable, scalable infrastructure on AWS
-- Long-term trusted partnership
+Our collaboration with Battery Ventures delivers a powerful, purpose-built tool that empowers their global investment team. By tackling the complexity of numerous full-stack features and third-party integrations, we provide the firm with a unified platform that enhances productivity and supports smarter investment decisions at scale.

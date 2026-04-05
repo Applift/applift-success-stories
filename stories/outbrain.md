@@ -1,36 +1,30 @@
 ---
 title: Outbrain
-description: Developing the Smartfeed Mobile SDK responsible for fetching and showing recommendations within publisher content like CNN, Sky News, and ESPN.
+description: Outbrain's Smartfeed Mobile SDK.
 sidebar_label: Outbrain
-tags: [AdTech]
-hero_image: /img/success-stories/outbrain.svg
-tech_stack: [iOS, Android, Mobile SDK]
-results: Global publisher reach
+tags: [iOS, Android, React Native]
+hero_image: /img/success-stories/outbrain.png
 ---
 
 # Outbrain
 
-Developing the **Smartfeed Mobile SDK** responsible for fetching and showing recommendations within publisher content like **CNN**, **Sky News**, and **ESPN**.
+Outbrain is a leading recommendation platform for the open web. Their technology enables one-third of the world's online consumers to discover new things through recommendation feeds on their favorite media and connects advertisers to these audiences to grow their business.
 
-## The Challenge
+We are working on Outbrain's Smartfeed Mobile SDK. This SDK is responsible for fetching and showing Outbrain recommendations within the content of publishers such as: CNN, Sky News, ESPN and many more.
 
-Outbrain needed a high-performance mobile SDK that could seamlessly integrate into top-tier publisher apps, delivering personalized content recommendations without impacting app performance or user experience.
+## Engineering Focus
 
-## Our Approach
+- Mobile SDK Development: Building and maintaining the Smartfeed Mobile SDK, which powers content recommendations inside top-tier publisher applications worldwide.
+- Publisher Integration: Designing a flexible integration layer that allows publishers like CNN, Sky News, and ESPN to seamlessly embed Outbrain recommendations within their content.
+- Performance Optimization: Engineering low-latency recommendation fetching and rendering to ensure a smooth, non-intrusive user experience within publisher apps.
+- Cross-Platform Delivery: Developing native SDK implementations for both iOS and Android, maintaining consistent behavior and reliability across platforms.
 
-- Built native **iOS** and **Android** SDKs optimized for minimal footprint
-- Designed a flexible integration API for diverse publisher requirements
-- Implemented smart caching and prefetching for instant content loading
-- Rigorous testing across hundreds of publisher configurations
+## Technical Stack
 
-## Tech Stack
+- **Platform**: iOS, Android
+- **Domain**: Mobile SDK
+- **Integrations**: Publisher Content Feeds (CNN, Sky News, ESPN, and more)
 
-- iOS (Swift/Objective-C)
-- Android (Kotlin/Java)
-- Mobile SDK Architecture
+## The Impact
 
-## Results
-
-- **Global publisher reach** including CNN, Sky News, ESPN
-- Seamless integration across thousands of publisher apps
-- Sub-second recommendation rendering
+Our work on the Smartfeed Mobile SDK enables Outbrain to deliver personalized content recommendations to millions of users across the world's leading publisher apps. By building a high-performance, easy-to-integrate SDK, we help Outbrain extend its reach across the open web and drive meaningful engagement for publishers and advertisers alike.
