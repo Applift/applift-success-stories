@@ -1,4 +1,5 @@
 import {usePluginData} from '@docusaurus/useGlobalData';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import type {CaseStudy} from '@site/src/components/SuccessStories/data';
 
 interface StoryData {
@@ -13,13 +14,15 @@ interface StoryData {
 
 export function useSuccessStories(): CaseStudy[] {
   const stories = usePluginData('success-stories-data') as StoryData[];
+  const {siteConfig} = useDocusaurusContext();
+  const baseUrl = siteConfig.baseUrl.replace(/\/$/, '');
 
   return stories.map((story) => ({
     slug: story.slug,
     clientName: story.title,
     industry: (story.tags[0] ?? 'Other') as CaseStudy['industry'],
     summary: story.description,
-    heroImage: story.hero_image,
+    heroImage: story.hero_image ? `${baseUrl}${story.hero_image}` : '',
     techStack: story.tech_stack,
     results: story.results,
     link: `/success-stories/${story.slug}`,
