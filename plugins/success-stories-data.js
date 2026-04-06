@@ -23,6 +23,7 @@ module.exports = function successStoriesDataPlugin(context) {
           tags: data.tags ?? [],
           hero_image: data.hero_image ?? '',
           tech_stack: data.tech_stack ?? [],
+          general_tags: data.general_tags ?? [],
           results: data.results,
         };
       });

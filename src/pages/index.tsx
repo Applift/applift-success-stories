@@ -13,14 +13,14 @@ export default function SuccessStories(): React.JSX.Element {
 
   const allTags = useMemo(() => {
     const set = new Set<string>();
-    caseStudies.forEach((s) => s.tags.forEach((t) => set.add(t)));
+    caseStudies.forEach((s) => s.generalTags.forEach((t) => set.add(t)));
     return Array.from(set).sort();
   }, [caseStudies]);
 
   const filtered = useMemo(
     () =>
       activeFilter
-        ? caseStudies.filter((s) => s.tags.includes(activeFilter))
+        ? caseStudies.filter((s) => s.generalTags.includes(activeFilter))
         : caseStudies,
     [activeFilter, caseStudies],
   );

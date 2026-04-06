@@ -7,6 +7,7 @@ interface StoryData {
   title: string;
   description: string;
   tags: string[];
+  general_tags: string[];
   hero_image: string;
   tech_stack: string[];
   results?: string;
@@ -21,6 +22,7 @@ export function useSuccessStories(): CaseStudy[] {
     slug: story.slug,
     clientName: story.title,
     tags: story.tags ?? [],
+    generalTags: story.general_tags ?? [],
     summary: story.description,
     heroImage: story.hero_image ? `${baseUrl}${story.hero_image}` : '',
     techStack: story.tech_stack,
