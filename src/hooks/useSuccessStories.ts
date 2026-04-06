@@ -27,6 +27,6 @@ export function useSuccessStories(): CaseStudy[] {
     heroImage: story.hero_image ? `${baseUrl}${story.hero_image}` : '',
     techStack: story.tech_stack,
     results: story.results,
-    link: `/success-stories/${story.slug}`,
+    link: `/${story.slug}`,
   }));
 }
