@@ -1,0 +1,27 @@
+.section {
+  margin: 2rem 0 2.5rem;
+}
+
+.label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ss-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ss-text-secondary);
+}
+
+.body p {
+  margin: 0;
+}
+
+.body p + p {
+  margin-top: 0.75rem;
+}
