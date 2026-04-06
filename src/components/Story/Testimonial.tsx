@@ -7,9 +7,10 @@ interface TestimonialProps {
   name: string;
   role: string;
   image?: string;
+  titles?: string[];
 }
 
-export default function Testimonial({ quote, name, role, image }: TestimonialProps): React.JSX.Element {
+export default function Testimonial({ quote, name, role, image, titles }: TestimonialProps): React.JSX.Element {
   const resolvedImage = useBaseUrl(image ?? '');
   const pages = useMemo(
     () => quote.split(/\n\n+/).map((p) => p.trim()).filter(Boolean),
@@ -64,6 +65,9 @@ export default function Testimonial({ quote, name, role, image }: TestimonialPro
             <div className={styles.attribution}>
               <span className={styles.name}>{name}</span>
               <span className={styles.role}>{role}</span>
+              {titles?.[page] && (
+                <span className={styles.title}>{titles[page]}</span>
+              )}
             </div>
           </div>
         </div>

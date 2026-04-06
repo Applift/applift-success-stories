@@ -115,6 +115,14 @@
   color: var(--ss-text-muted);
 }
 
+.title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin-top: 0.25rem;
+}
+
 @media (max-width: 640px) {
   .layout {
     flex-direction: column;
