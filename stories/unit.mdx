@@ -1,10 +1,12 @@
 ---
 title: Unit
 description: Multiple native mobile SDKs that are being used by Unit's clients.
-sidebar_label: Unit
 tags: [iOS, Android, React Native]
 general_tags: [iOS, Android]
 hero_image: /img/success-stories/unit.png
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
 ---
 
 <StoryHero
@@ -13,37 +15,54 @@ hero_image: /img/success-stories/unit.png
   tags={["iOS", "Android", "React Native"]}
   heroImage="/img/success-stories/unit.png"
   engagement="Ongoing Partnership"
+  duration="Ongoing"
 />
 
-<Overview>
-Unit is the banking-as-a-service platform that lets companies embed powerful financial features into their product. We develop multiple native mobile SDKs used by Unit's clients, author implementation guides, and support client integrations. For example, we built a Mobile SDK for adding Unit credit cards to Apple Wallet, Google Pay, and Samsung Pay using Visa's push provisioning.
-</Overview>
+<ExecutiveSummary>
+Building production-grade mobile SDKs that enable Unit's clients to embed **powerful banking features** into their apps, including **digital wallet provisioning** for Apple Wallet, Google Pay, and Samsung Pay.
+</ExecutiveSummary>
 
-<FocusGrid items={[
-  {
-    title: "Native Mobile SDK Development",
-    description: "Multiple production-grade mobile SDKs enabling Unit's clients to embed banking features into their applications."
-  },
-  {
-    title: "Digital Wallet Integration",
-    description: "Dedicated SDK for Apple Wallet, Google Pay, and Samsung Pay using Visa push provisioning technology."
-  },
-  {
-    title: "Client Integration Support",
-    description: "Comprehensive implementation guides and hands-on support throughout the integration process."
-  },
-  {
-    title: "Cross-Platform Delivery",
-    description: "Consistent SDK behavior and reliability across iOS and Android in a highly regulated financial environment."
-  }
+<Challenge glanceItems={[
+  { label: "Platforms", value: "iOS, Android" },
+  { label: "Integrations", value: "Apple Wallet, Google Pay, Samsung Pay" },
+  { label: "Key Outcome", value: "Multi-SDK Suite" }
+]}>
+Unit is the banking-as-a-service platform that lets companies embed powerful financial features into their product. They needed multiple native mobile SDKs for their clients, comprehensive implementation guides, and hands-on integration support. A key challenge was building a Mobile SDK for adding Unit credit cards to Apple Wallet, Google Pay, and Samsung Pay using Visa's push provisioning — a highly regulated, technically complex integration.
+</Challenge>
+
+<Solution clientInfo={{ description: "Unit is the banking-as-a-service platform that lets companies embed powerful financial features into their product.", websiteUrl: "https://unit.co" }}>
+
+**Native Mobile SDK Development**
+
+Multiple production-grade mobile SDKs enabling Unit's clients to embed banking features into their applications.
+
+**Digital Wallet Integration**
+
+Dedicated SDK for Apple Wallet, Google Pay, and Samsung Pay using Visa push provisioning technology.
+
+**Client Integration Support**
+
+Comprehensive implementation guides and hands-on support throughout the integration process.
+
+**Cross-Platform Delivery**
+
+Consistent SDK behavior and reliability across iOS and Android in a highly regulated financial environment.
+</Solution>
+
+{/* <ImageGallery images={[
+  { src: "/img/success-stories/unit-screen-1.png", alt: "Unit SDK integration" },
+  { src: "/img/success-stories/unit-screen-2.png", alt: "Digital wallet provisioning" }
+]} /> */}
+
+<ImpactMetrics metrics={[
+  { value: "3", label: "Wallet Platforms", description: "Apple Wallet, Google Pay, and Samsung Pay provisioning via a single SDK." },
+  { value: "2", label: "Native SDKs", description: "Production-grade iOS and Android SDKs used by Unit's growing client base." },
+  { value: "100%", label: "Visa Compliance", description: "Fully compliant push provisioning implementation in a regulated financial environment." }
 ]} />
 
-<TechStack items={[
-  { category: "Platform", technologies: ["iOS", "Android"] },
-  { category: "Integrations", technologies: ["Apple Wallet", "Google Pay", "Samsung Pay"] },
-  { category: "Provisioning", technologies: ["Visa Push Provisioning SDK"] }
-]} />
-
-<Impact>
-A suite of robust, client-facing mobile SDKs powering the financial experiences of Unit's growing customer base. By handling digital wallet provisioning complexity and providing white-glove integration support, we help Unit deliver a seamless banking-as-a-service experience.
-</Impact>
+{/* <Testimonial
+  quote="Quote from Unit stakeholder about Applift's contribution."
+  name="Stakeholder Name"
+  role="Role, Unit"
+  image="/img/testimonials/unit.jpg"
+/> */}

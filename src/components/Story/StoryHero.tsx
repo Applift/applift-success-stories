@@ -8,6 +8,8 @@ interface StoryHeroProps {
   tags?: string[];
   heroImage?: string;
   engagement?: string;
+  duration?: string;
+  category?: string;
 }
 
 export default function StoryHero({
@@ -16,21 +18,13 @@ export default function StoryHero({
   tags = [],
   heroImage,
   engagement,
+  duration,
+  category,
 }: StoryHeroProps): React.JSX.Element {
   const resolvedImage = useBaseUrl(heroImage ?? '');
   return (
     <header className={styles.hero}>
       <div className={styles.topRow}>
-        {heroImage && (
-          <div className={styles.logoWrap}>
-            <img
-              src={resolvedImage}
-              alt={`${title} logo`}
-              className={styles.logo}
-              loading="eager"
-            />
-          </div>
-        )}
         <div className={styles.meta}>
           {tags.length > 0 && (
             <div className={styles.tags}>
@@ -44,9 +38,30 @@ export default function StoryHero({
           )}
         </div>
       </div>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.description}>{description}</p>
-      <div className={styles.divider} />
+
+      <div className={styles.titleRow}>
+        <div className={styles.titleBlock}>
+          <h1 className={styles.title}>{title}</h1>
+          <p className={styles.description}>{description}</p>
+        </div>
+        {duration && (
+          <div className={styles.durationCard}>
+            <span className={styles.durationLabel}>Duration</span>
+            <span className={styles.durationValue}>{duration}</span>
+          </div>
+        )}
+      </div>
+
+      {heroImage && (
+        <div className={styles.heroImageWrap}>
+          <img
+            src={resolvedImage}
+            alt={`${title} hero`}
+            className={styles.heroImage}
+            loading="eager"
+          />
+        </div>
+      )}
     </header>
   );
 }

@@ -1,0 +1,43 @@
+.section {
+  margin: 3rem 0;
+}
+
+.heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ss-text-primary);
+  margin: 0 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--gallery-columns, 2), 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.figure {
+  margin: 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.caption {
+  font-size: 0.8rem;
+  color: var(--ss-text-muted);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

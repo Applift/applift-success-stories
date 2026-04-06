@@ -38,7 +38,7 @@ const config: Config = {
         id: 'stories',
         path: 'stories',
         routeBasePath: '/',
-        sidebarPath: './sidebarsStories.ts',
+        sidebarPath: false,
         editUrl: undefined,
       },
     ],

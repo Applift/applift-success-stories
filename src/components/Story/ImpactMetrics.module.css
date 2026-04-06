@@ -1,0 +1,57 @@
+.section {
+  margin: 3rem 0;
+}
+
+.heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ss-text-primary);
+  margin: 0 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--ss-surface-container-low);
+  border: 1px solid var(--ss-outline-variant);
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+}
+
+.value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+  line-height: 1.1;
+  margin-bottom: 0.375rem;
+}
+
+.label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ss-text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--ss-text-muted);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

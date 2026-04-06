@@ -1,10 +1,12 @@
 ---
 title: Jotit
 description: Designed for Students. Built for iPad. Optimized for Apple Pencil.
-sidebar_label: Jotit
 tags: [iOS]
 general_tags: [iOS]
 hero_image: /img/success-stories/jotit.png
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
 ---
 
 <StoryHero
@@ -13,37 +15,54 @@ hero_image: /img/success-stories/jotit.png
   tags={["iOS"]}
   heroImage="/img/success-stories/jotit.png"
   engagement="Greenfield Build"
+  duration="Completed"
 />
 
-<Overview>
-As Jotit's development partner, we built their iPad application from the ground up, optimizing the experience for the classroom and beyond. The app features deep Apple Pencil integration, giving students a natural, tactile way to express ideas and interact with content. Jotit also connects seamlessly with leading LMS platforms like Canvas and leverages Firebase for real-time sync and authentication.
-</Overview>
+<ExecutiveSummary>
+Built a purpose-designed **iPad learning application** from the ground up, featuring deep **Apple Pencil integration** with PencilKit, seamless LMS connectivity, and Firebase-powered real-time sync.
+</ExecutiveSummary>
 
-<FocusGrid items={[
-  {
-    title: "Native iPad Development",
-    description: "Purpose-built iPad application from scratch, leveraging full platform capabilities for a fluid, education-tailored experience."
-  },
-  {
-    title: "Apple Pencil Integration",
-    description: "Deep PencilKit support with low-latency ink rendering, pressure sensitivity, and palm rejection for a natural writing feel."
-  },
-  {
-    title: "LMS Integration",
-    description: "Seamless connectivity with Canvas and other Learning Management Systems for existing academic workflows."
-  },
-  {
-    title: "Real-Time Backend",
-    description: "Firebase-powered real-time data sync, user authentication, and scalable cloud infrastructure."
-  }
+<Challenge glanceItems={[
+  { label: "Platform", value: "iOS (iPad)" },
+  { label: "Backend", value: "Firebase" },
+  { label: "Key Outcome", value: "App Launched" }
+]}>
+As Jotit's development partner, the challenge was building a native iPad application from scratch that delivered a natural, tactile experience optimized for the classroom. The app needed deep Apple Pencil integration with low-latency ink rendering, seamless connectivity with leading LMS platforms like Canvas, and Firebase-powered real-time sync and authentication — all while keeping the experience intuitive for students.
+</Challenge>
+
+<Solution clientInfo={{ description: "Jotit is a learning platform designed for students, built for iPad, and optimized for Apple Pencil to transform digital note-taking in education." }}>
+
+**Native iPad Development**
+
+Purpose-built iPad application from scratch, leveraging full platform capabilities for a fluid, education-tailored experience.
+
+**Apple Pencil Integration**
+
+Deep PencilKit support with low-latency ink rendering, pressure sensitivity, and palm rejection for a natural writing feel.
+
+**LMS Integration**
+
+Seamless connectivity with Canvas and other Learning Management Systems for existing academic workflows.
+
+**Real-Time Backend**
+
+Firebase-powered real-time data sync, user authentication, and scalable cloud infrastructure.
+</Solution>
+
+<ImageGallery images={[
+  { src: "/img/success-stories/jotit/jotit-img-1.png", alt: "Jotit iPad app" },
+  { src: "/img/success-stories/jotit/jotit-img-2.png", alt: "Jotit Apple Pencil note-taking" }
 ]} />
 
-<TechStack items={[
-  { category: "Platform", technologies: ["iOS (iPad)"] },
-  { category: "Backend", technologies: ["Firebase"] },
-  { category: "Integrations", technologies: ["Canvas LMS", "PencilKit"] }
+<ImpactMetrics metrics={[
+  { value: "1", label: "App Launched", description: "Polished, classroom-ready iPad application shipped to the App Store." },
+  { value: "Native", label: "Pencil Support", description: "Deep PencilKit integration with low-latency ink rendering and pressure sensitivity." },
+  { value: "Real-Time", label: "Sync", description: "Firebase-powered real-time data sync across devices for seamless collaboration." }
 ]} />
 
-<Impact>
-Delivered a polished, classroom-ready iPad application that transforms digital learning. By combining Apple Pencil precision with seamless LMS integration and a robust real-time backend, we helped Jotit launch a product students and educators rely on daily.
-</Impact>
+<Testimonial
+  quote="Quote from Jotit CEO about Applift's contribution."
+  name="Dudu Bleicher"
+  role="CEO, Jotit"
+  image="/img/testimonials/jotit.jpg"
+/>
