@@ -96,6 +96,14 @@
   border-bottom: none;
 }
 
+/* Top-level MDX prose in story pages (editorial-narrative layout).
+   Direct-child selector avoids leaking into Story components. */
+.docs-doc-page .theme-doc-markdown > p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ss-text-secondary);
+}
+
 .docs-doc-page article ul {
   line-height: 1.8;
 }
