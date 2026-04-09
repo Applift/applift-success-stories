@@ -40,6 +40,7 @@ const config: Config = {
         routeBasePath: '/',
         sidebarPath: false,
         editUrl: undefined,
+        breadcrumbs: false,
       },
     ],
     './plugins/success-stories-data',
@@ -74,7 +75,7 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} Applift Consulting. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Applift Consulting.`,
     },
     prism: {
       theme: prismThemes.github,

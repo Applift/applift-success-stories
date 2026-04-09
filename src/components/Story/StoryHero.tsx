@@ -24,24 +24,9 @@ export default function StoryHero({
   const resolvedImage = useBaseUrl(heroImage ?? '');
   return (
     <header className={styles.hero}>
-      <div className={styles.topRow}>
-        <div className={styles.meta}>
-          {tags.length > 0 && (
-            <div className={styles.tags}>
-              {tags.map((tag) => (
-                <span key={tag} className={styles.tag}>{tag}</span>
-              ))}
-            </div>
-          )}
-          {engagement && (
-            <span className={styles.engagement}>{engagement}</span>
-          )}
-        </div>
-      </div>
-
       <div className={styles.titleRow}>
         <div className={styles.titleBlock}>
-          <h1 className={styles.title}>{title}</h1>
+          {/* <h1 className={styles.title}>{title}</h1> */}
           <p className={styles.description}>{description}</p>
         </div>
         {duration && (

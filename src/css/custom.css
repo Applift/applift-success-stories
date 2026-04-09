@@ -75,6 +75,8 @@
 /* ===== Story doc page styles ===== */
 .docs-doc-page [class*='docItemContainer'] {
   max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Hide the auto-generated h1 from frontmatter title — StoryHero handles it */
@@ -100,4 +102,13 @@
 
 .docs-doc-page article strong {
   color: var(--ifm-color-primary);
+}
+
+.theme-doc-footer {
+  display: none;
+}
+
+/* Hide Docusaurus auto-generated title h1 from frontmatter */
+.theme-doc-markdown > h1:first-child {
+  display: none;
 }
