@@ -7,13 +7,15 @@
 
 .content {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2.5rem;
 }
 
 .main {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .meta {
@@ -67,6 +69,21 @@
   height: auto;
 }
 
+.logo {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.logo img {
+  display: block;
+  max-width: 140px;
+  max-height: 56px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
 .label {
   font-family: 'Manrope', sans-serif;
   font-size: 0.7rem;
@@ -83,6 +100,10 @@
   font-weight: 600;
   line-height: 1.5;
   color: var(--ss-summary-text, #ffffff);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .body p {
