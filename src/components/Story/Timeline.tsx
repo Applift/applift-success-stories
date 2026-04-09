@@ -15,7 +15,7 @@ interface TimelineProps {
 export default function Timeline({
   phases,
   variant = 'vertical',
-  heading = 'How It Unfolded',
+  heading = 'The Process',
 }: TimelineProps): React.JSX.Element {
   return (
     <section className={styles.section}>
