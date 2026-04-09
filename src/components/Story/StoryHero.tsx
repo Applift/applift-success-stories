@@ -7,9 +7,6 @@ interface StoryHeroProps {
   description: string;
   tags?: string[];
   heroImage?: string;
-  engagement?: string;
-  duration?: string;
-  category?: string;
 }
 
 export default function StoryHero({
@@ -17,24 +14,12 @@ export default function StoryHero({
   description,
   tags = [],
   heroImage,
-  engagement,
-  duration,
-  category,
 }: StoryHeroProps): React.JSX.Element {
   const resolvedImage = useBaseUrl(heroImage ?? '');
   return (
     <header className={styles.hero}>
-      <div className={styles.titleRow}>
-        <div className={styles.titleBlock}>
-          {/* <h1 className={styles.title}>{title}</h1> */}
-          <p className={styles.description}>{description}</p>
-        </div>
-        {duration && (
-          <div className={styles.durationCard}>
-            <span className={styles.durationLabel}>Duration</span>
-            <span className={styles.durationValue}>{duration}</span>
-          </div>
-        )}
+      <div className={styles.titleBlock}>
+        <p className={styles.description}>{description}</p>
       </div>
 
       {heroImage && (

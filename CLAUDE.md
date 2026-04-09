@@ -36,8 +36,8 @@ Stories can follow one of two layouts:
 
 | Component | Props | Purpose |
 |-----------|-------|---------|
-| `StoryHero` | `title`, `description`, `tags`, `heroImage`, `engagement`, `duration` | Hero header with tags, title, subtitle, duration card, and full-width image |
-| `ExecutiveSummary` | `children` (MDX) | Dark navy banner with bold summary text; supports `**bold**` for metric highlights |
+| `StoryHero` | `title`, `description`, `tags`, `heroImage` | Hero header with description and full-width image |
+| `ExecutiveSummary` | `children` (MDX), `status?`, `platforms?` (`string[]`), `technology?` (`string[]`) | Dark navy banner with bold summary text and optional right-side meta column (Status / Platforms / Technology) |
 | `Challenge` | `children` (MDX), `glanceItems` (`{label, value}[]`) | Narrative text + "Project at a Glance" sidebar card |
 | `Partnership` | `children` (MDX) | Narrative section about how Applift worked with the client (required for case-study layout) |
 | `InlineQuote` | `quote`, `name`, `role`, `image?` | Subtle left-bar pull-quote placed contextually between sections |
