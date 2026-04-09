@@ -3,18 +3,16 @@ import styles from './ExecutiveSummary.module.css';
 
 interface ExecutiveSummaryProps {
   children: React.ReactNode;
-  status?: string;
   platforms?: string[];
   technology?: string[];
 }
 
 export default function ExecutiveSummary({
   children,
-  status,
   platforms = [],
   technology = [],
 }: ExecutiveSummaryProps): React.JSX.Element {
-  const hasMeta = Boolean(status) || platforms.length > 0 || technology.length > 0;
+  const hasMeta = platforms.length > 0 || technology.length > 0;
   return (
     <section className={styles.banner}>
       <div className={styles.content}>
@@ -24,12 +22,6 @@ export default function ExecutiveSummary({
         </div>
         {hasMeta && (
           <aside className={styles.meta}>
-            {status && (
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Status</span>
-                <span className={styles.metaValue}>{status}</span>
-              </div>
-            )}
             {platforms.length > 0 && (
               <div className={styles.metaItem}>
                 <span className={styles.metaLabel}>Platforms</span>
