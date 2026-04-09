@@ -11,32 +11,71 @@ interface GalleryImage {
 interface ImageGalleryProps {
   images: GalleryImage[];
   columns?: 2 | 3;
+  /** When true, render the first image as a large hero followed by the rest in a grid. */
+  featuredFirst?: boolean;
+  /** Override the section heading. Pass null to hide it. */
+  heading?: string | null;
 }
 
-export default function ImageGallery({ images, columns = 2 }: ImageGalleryProps): React.JSX.Element {
+function GalleryFigure({ img }: { img: GalleryImage }): React.JSX.Element {
+  const resolved = useBaseUrl(img.src);
+  return (
+    <figure className={styles.figure}>
+      <img
+        src={resolved}
+        alt={img.alt}
+        className={styles.image}
+        loading="lazy"
+      />
+      {img.caption && (
+        <figcaption className={styles.caption}>{img.caption}</figcaption>
+      )}
+    </figure>
+  );
+}
+
+export default function ImageGallery({
+  images,
+  columns = 2,
+  featuredFirst = false,
+  heading = 'Screenshots',
+}: ImageGalleryProps): React.JSX.Element {
+  if (featuredFirst && images.length > 0) {
+    const [hero, ...rest] = images;
+    return (
+      <section className={styles.section}>
+        {heading && <h2 className={styles.heading}>{heading}</h2>}
+        <div className={styles.hero}>
+          <GalleryFigure img={hero} />
+        </div>
+        {rest.length > 0 && (
+          <div
+            className={styles.grid}
+            style={
+              {
+                '--gallery-columns': Math.min(rest.length, columns),
+              } as React.CSSProperties
+            }
+          >
+            {rest.map((img, i) => (
+              <GalleryFigure key={i} img={img} />
+            ))}
+          </div>
+        )}
+      </section>
+    );
+  }
+
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>Screenshots</h2>
+      {heading && <h2 className={styles.heading}>{heading}</h2>}
       <div
         className={styles.grid}
         style={{ '--gallery-columns': columns } as React.CSSProperties}
       >
-        {images.map((img, i) => {
-          const resolved = useBaseUrl(img.src);
-          return (
-            <figure key={i} className={styles.figure}>
-              <img
-                src={resolved}
-                alt={img.alt}
-                className={styles.image}
-                loading="lazy"
-              />
-              {img.caption && (
-                <figcaption className={styles.caption}>{img.caption}</figcaption>
-              )}
-            </figure>
-          );
-        })}
+        {images.map((img, i) => (
+          <GalleryFigure key={i} img={img} />
+        ))}
       </div>
     </section>
   );

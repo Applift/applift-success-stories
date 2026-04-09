@@ -29,17 +29,24 @@ This is a **Docusaurus 3.9** site (with v4 future flag enabled) for Applift Succ
 
 ## Story Page Components
 
-Each story MDX file uses these components in order:
+Stories can follow one of two layouts:
+
+- **Case-study layout** (default): StoryHero → ExecutiveSummary → Challenge → Partnership → (InlineQuote?) → Solution → (ImageGallery?) → ImpactMetrics → (InlineQuote?)
+- **Editorial-narrative layout** (e.g. `jotit.mdx`): StoryHero → ExecutiveSummary → narrative prose → (PullQuote|InlineQuote) → ImageGallery (`featuredFirst`) → narrative prose → InlineQuote → Timeline → narrative prose → (PullQuote|InlineQuote). Narrative prose is plain MDX wrapped in a 680px-max div.
 
 | Component | Props | Purpose |
 |-----------|-------|---------|
 | `StoryHero` | `title`, `description`, `tags`, `heroImage`, `engagement`, `duration` | Hero header with tags, title, subtitle, duration card, and full-width image |
 | `ExecutiveSummary` | `children` (MDX) | Dark navy banner with bold summary text; supports `**bold**` for metric highlights |
 | `Challenge` | `children` (MDX), `glanceItems` (`{label, value}[]`) | Narrative text + "Project at a Glance" sidebar card |
+| `Partnership` | `children` (MDX) | Narrative section about how Applift worked with the client (required for case-study layout) |
+| `InlineQuote` | `quote`, `name`, `role`, `image?` | Subtle left-bar pull-quote placed contextually between sections |
+| `PullQuote` | `quote`, `name?`, `role?`, `image?` | Large, centered editorial quote with top/bottom rule — used for opening/closing statements |
 | `Solution` | `children` (MDX), `clientInfo` (`{description, websiteUrl?}`) | Solution details with bold subheadings + "About the Client" sidebar card |
-| `ImageGallery` | `images` (`{src, alt, caption?}[]`), `columns?` (2\|3) | Responsive image grid for app screenshots |
+| `ImageGallery` | `images` (`{src, alt, caption?}[]`), `columns?` (2\|3), `featuredFirst?`, `heading?` (`string\|null`) | Responsive image grid; `featuredFirst` renders the first image as a hero with the rest in a grid below |
+| `Timeline` | `phases` (`{title, description}[]`), `variant?` (`'vertical'\|'horizontal'`), `heading?` | Stepped project timeline — vertical with connector line or horizontal card grid |
 | `ImpactMetrics` | `metrics` (`{value, label, description?}[]`) | Metric cards with large numbers, labels, and descriptions |
-| `Testimonial` | `quote`, `name`, `role`, `image?` | Quote with circular avatar; auto-splits into carousel by paragraph breaks |
+| `Testimonial` | `quote`, `name`, `role`, `image?` | (Deprecated) Quote with circular avatar; use `InlineQuote` or `PullQuote` for new stories |
 
 ## Key Details
 
@@ -49,6 +56,6 @@ Each story MDX file uses these components in order:
 - CSS modules (`.module.css`) for component-scoped styles
 - Infima CSS variables prefixed with `--ifm-` for theming
 - Custom design tokens prefixed with `--ss-` in `custom.css`
-- Fonts: Plus Jakarta Sans (headings), Inter (body) via Google Fonts
+- Fonts: Manrope (headings/display), Inter (body) via Google Fonts
 - `respectPrefersColorScheme: true` — dark mode follows system preference
 - Story page container max-width: 960px

@@ -70,7 +70,7 @@
   --ss-summary-text: #e0e4f0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 /* ===== Story doc page styles ===== */
 .docs-doc-page [class*='docItemContainer'] {
@@ -83,7 +83,7 @@
 }
 
 .docs-doc-page article h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: -0.01em;

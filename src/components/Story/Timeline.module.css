@@ -1,0 +1,174 @@
+.section {
+  margin: 3.5rem 0;
+}
+
+.heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ss-text-primary);
+  margin: 0 0 2rem;
+}
+
+/* ===== Vertical variant ===== */
+.vertical {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.vertical::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--ifm-color-primary) 0%,
+    var(--ss-outline-variant) 100%
+  );
+  border-radius: 2px;
+}
+
+.vertical .item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 1.25rem;
+  padding: 0 0 2rem 0;
+}
+
+.vertical .item:last-child {
+  padding-bottom: 0;
+}
+
+.vertical .marker {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px var(--ss-bg);
+}
+
+.vertical .markerNumber {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.vertical .content {
+  padding-top: 0.25rem;
+}
+
+/* ===== Horizontal variant ===== */
+.horizontal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.horizontal .item {
+  position: relative;
+  background: var(--ss-card-bg);
+  border: 1px solid var(--ss-outline-variant);
+  border-radius: var(--ss-border-radius-card);
+  padding: 1.5rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.horizontal .item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ifm-color-primary);
+}
+
+.horizontal .marker {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ss-surface-container);
+  color: var(--ifm-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.horizontal .markerNumber {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.horizontal .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ===== Shared inner text ===== */
+.phaseLabel {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.phaseTitle {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ss-text-primary);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.phaseDescription {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ss-text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .vertical .item {
+    grid-template-columns: 32px 1fr;
+    gap: 1rem;
+  }
+
+  .vertical::before {
+    left: 15px;
+  }
+
+  .vertical .marker {
+    width: 32px;
+    height: 32px;
+  }
+}

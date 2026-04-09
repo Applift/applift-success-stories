@@ -3,12 +3,29 @@
 }
 
 .heading {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--ss-text-primary);
   margin: 0 0 1.5rem;
+}
+
+.hero {
+  margin: 0 0 1rem;
+}
+
+.hero .figure {
+  margin: 0;
+}
+
+.hero .image {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 20px 60px -30px rgba(17, 28, 45, 0.35);
 }
 
 .grid {

@@ -6,14 +6,22 @@ import Solution from '@site/src/components/Story/Solution';
 import ImageGallery from '@site/src/components/Story/ImageGallery';
 import ImpactMetrics from '@site/src/components/Story/ImpactMetrics';
 import Testimonial from '@site/src/components/Story/Testimonial';
+import Partnership from '@site/src/components/Story/Partnership';
+import InlineQuote from '@site/src/components/Story/InlineQuote';
+import PullQuote from '@site/src/components/Story/PullQuote';
+import Timeline from '@site/src/components/Story/Timeline';
 
 export default {
   ...MDXComponents,
   StoryHero,
   ExecutiveSummary,
   Challenge,
+  Partnership,
   Solution,
   ImageGallery,
   ImpactMetrics,
+  InlineQuote,
+  PullQuote,
+  Timeline,
   Testimonial,
 };
