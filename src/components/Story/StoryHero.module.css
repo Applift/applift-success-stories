@@ -1,6 +1,6 @@
 .hero {
-  padding: 0 0 2rem;
-  margin-bottom: 0.5rem;
+  padding: 0;
+  margin-bottom: 0;
 }
 
 .topRow {
@@ -67,9 +67,10 @@
 
 .heroImageWrap {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
   overflow: hidden;
   border: 1px solid var(--ss-outline-variant);
+  border-bottom: none;
 }
 
 .heroImage {

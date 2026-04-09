@@ -1,18 +1,22 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './ExecutiveSummary.module.css';
 
 interface ExecutiveSummaryProps {
   children: React.ReactNode;
   platforms?: string[];
   technology?: string[];
+  appStoreUrl?: string;
 }
 
 export default function ExecutiveSummary({
   children,
   platforms = [],
   technology = [],
+  appStoreUrl,
 }: ExecutiveSummaryProps): React.JSX.Element {
-  const hasMeta = platforms.length > 0 || technology.length > 0;
+  const hasMeta = platforms.length > 0 || technology.length > 0 || Boolean(appStoreUrl);
+  const appStoreBadgeSrc = useBaseUrl('/img/download-on-app-store.svg');
   return (
     <section className={styles.banner}>
       <div className={styles.content}>
@@ -33,6 +37,11 @@ export default function ExecutiveSummary({
                 <span className={styles.metaLabel}>Technology</span>
                 <span className={styles.metaValue}>{technology.join(', ')}</span>
               </div>
+            )}
+            {appStoreUrl && (
+              <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" className={styles.appStoreBadge}>
+                <img src={appStoreBadgeSrc} alt="Download on the App Store" />
+              </a>
             )}
           </aside>
         )}

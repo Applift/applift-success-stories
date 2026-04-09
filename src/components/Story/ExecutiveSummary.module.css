@@ -1,8 +1,8 @@
 .banner {
-  margin: 2.5rem -1.5rem;
+  margin: 0 0 2.5rem;
   padding: 2.5rem 2rem;
   background: var(--ss-summary-bg, #111c2d);
-  border-radius: 12px;
+  border-radius: 0 0 12px 12px;
 }
 
 .content {
@@ -61,6 +61,12 @@
   color: var(--ss-text-primary);
 }
 
+.appStoreBadge img {
+  display: block;
+  width: 130px;
+  height: auto;
+}
+
 .label {
   font-family: 'Manrope', sans-serif;
   font-size: 0.7rem;
@@ -101,7 +107,8 @@
 
 @media (max-width: 768px) {
   .banner {
-    margin: 2rem -1rem;
+    margin: 0 0 2rem;
+    border-radius: 0 0 12px 12px;
     padding: 2rem 1.5rem;
   }
 
