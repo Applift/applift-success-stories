@@ -4,6 +4,7 @@ import styles from './ExecutiveSummary.module.css';
 
 interface ExecutiveSummaryProps {
   children: React.ReactNode;
+  sector?: string;
   platforms?: string[];
   technology?: string[];
   appStoreUrl?: string;
@@ -13,6 +14,7 @@ interface ExecutiveSummaryProps {
 
 export default function ExecutiveSummary({
   children,
+  sector,
   platforms = [],
   technology = [],
   appStoreUrl,
@@ -20,6 +22,7 @@ export default function ExecutiveSummary({
   websiteUrl,
 }: ExecutiveSummaryProps): React.JSX.Element {
   const hasMeta =
+    Boolean(sector) ||
     platforms.length > 0 ||
     technology.length > 0 ||
     Boolean(appStoreUrl) ||
@@ -51,6 +54,12 @@ export default function ExecutiveSummary({
                   <img src={resolvedLogo} alt="Client logo" />
                 </div>
               )
+            )}
+            {sector && (
+              <div className={styles.metaItem}>
+                <span className={styles.metaLabel}>Sector</span>
+                <span className={styles.metaValue}>{sector}</span>
+              </div>
             )}
             {platforms.length > 0 && (
               <div className={styles.metaItem}>
