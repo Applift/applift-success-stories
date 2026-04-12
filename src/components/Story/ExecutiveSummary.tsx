@@ -8,6 +8,7 @@ interface ExecutiveSummaryProps {
   platforms?: string[];
   technology?: string[];
   appStoreUrl?: string;
+  playStoreUrl?: string;
   logoUrl?: string;
   websiteUrl?: string;
 }
@@ -18,6 +19,7 @@ export default function ExecutiveSummary({
   platforms = [],
   technology = [],
   appStoreUrl,
+  playStoreUrl,
   logoUrl,
   websiteUrl,
 }: ExecutiveSummaryProps): React.JSX.Element {
@@ -26,8 +28,10 @@ export default function ExecutiveSummary({
     platforms.length > 0 ||
     technology.length > 0 ||
     Boolean(appStoreUrl) ||
+    Boolean(playStoreUrl) ||
     Boolean(logoUrl);
   const appStoreBadgeSrc = useBaseUrl('/img/download-on-app-store.svg');
+  const playStoreBadgeSrc = useBaseUrl('/img/get-it-on-google-play.svg')
   const resolvedLogo = useBaseUrl(logoUrl ?? '');
   return (
     <section className={styles.banner}>
@@ -76,6 +80,11 @@ export default function ExecutiveSummary({
             {appStoreUrl && (
               <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" className={styles.appStoreBadge}>
                 <img src={appStoreBadgeSrc} alt="Download on the App Store" />
+              </a>
+            )}
+            {playStoreUrl && (
+              <a href={playStoreUrl} target="_blank" rel="noopener noreferrer" className={styles.appStoreBadge}>
+                <img src={playStoreBadgeSrc} alt="Get it on google play store" />
               </a>
             )}
           </aside>
