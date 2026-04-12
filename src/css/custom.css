@@ -120,3 +120,8 @@
 .theme-doc-markdown > h1:first-child {
   display: none;
 }
+
+/* Hide heading anchor links globally */
+.hash-link {
+  display: none !important;
+}
