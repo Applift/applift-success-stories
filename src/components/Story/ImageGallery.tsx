@@ -74,7 +74,7 @@ export default function ImageGallery({
         style={{ '--gallery-columns': columns } as React.CSSProperties}
       >
         {images.map((img, i) => (
-          <GalleryFigure key={i} img={img} centered={images.length > 1} />
+          <GalleryFigure key={i} img={img} />
         ))}
       </div>
     </section>

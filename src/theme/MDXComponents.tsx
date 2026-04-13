@@ -11,6 +11,7 @@ import InlineQuote from '@site/src/components/Story/InlineQuote';
 import PullQuote from '@site/src/components/Story/PullQuote';
 import Timeline from '@site/src/components/Story/Timeline';
 import ProjectHighlights from '@site/src/components/Story/ProjectHighlights';
+import IntegrationEcosystem from '@site/src/components/Story/IntegrationEcosystem';
 
 export default {
   ...MDXComponents,
@@ -26,4 +27,5 @@ export default {
   Timeline,
   Testimonial,
   ProjectHighlights,
+  IntegrationEcosystem,
 };

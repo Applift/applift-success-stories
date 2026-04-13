@@ -22,10 +22,8 @@
 .hero .image {
   width: 100%;
   height: auto;
-  max-height: 560px;
   border-radius: 14px;
-  object-fit: cover;
-  box-shadow: 0 20px 60px -30px rgba(17, 28, 45, 0.35);
+  object-fit: contain;
 }
 
 .grid {

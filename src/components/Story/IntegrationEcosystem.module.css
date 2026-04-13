@@ -1,0 +1,289 @@
+.section {
+  margin: 3rem 0;
+  padding: 3.5rem 2rem;
+  background: var(--ss-summary-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+/* ── Canvas ── */
+.canvas {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+}
+
+/* ── Ambient rings ── */
+.ringOuter,
+.ringInner {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ringOuter {
+  width: 92%;
+  height: 92%;
+}
+
+.ringInner {
+  width: 52%;
+  height: 52%;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Center hub ── */
+.hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 86, 208, 0.25) 0%,
+    rgba(0, 86, 208, 0.08) 100%
+  );
+  border: 1.5px solid rgba(0, 86, 208, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hubGlow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 86, 208, 0.15) 0%,
+    transparent 70%
+  );
+  animation: hubPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes hubPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+.hubLabel {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.hubSub {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 0.2rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Spokes ── */
+.spoke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 0;
+  transform-origin: 0 0;
+  transform: rotate(var(--spoke-angle));
+  animation: spokeIn 0.6s ease-out both;
+  animation-delay: var(--spoke-delay);
+}
+
+@keyframes spokeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Connection line ── */
+.line {
+  position: absolute;
+  left: 70px;
+  top: -0.5px;
+  right: 80px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.lineTracer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 86, 208, 0.5) 50%,
+    transparent 100%
+  );
+  animation: trace 3.5s ease-in-out infinite;
+  animation-delay: var(--spoke-delay);
+}
+
+@keyframes trace {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(350%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ── Node ── */
+.node {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(calc(-1 * var(--spoke-angle)));
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  min-width: 90px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.node:hover {
+  border-color: rgba(0, 86, 208, 0.5);
+  background: rgba(0, 86, 208, 0.08);
+}
+
+.nodeName {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.nodeCategory {
+  display: block;
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.15rem;
+  letter-spacing: 0.02em;
+}
+
+.nodeDirection {
+  display: block;
+  font-size: 0.55rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  color: rgba(0, 140, 255, 0.6);
+  margin-top: 0.3rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .canvas {
+    aspect-ratio: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .ringOuter,
+  .ringInner {
+    display: none;
+  }
+
+  .hub {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .spoke {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+    animation: none;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .node {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+    padding: 0.85rem 1rem;
+  }
+
+  .nodeName {
+    font-size: 0.85rem;
+  }
+
+  .nodeCategory {
+    font-size: 0.7rem;
+  }
+
+  .nodeDirection {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .section {
+    padding: 2.5rem 1.25rem;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hub {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hubLabel {
+    font-size: 0.72rem;
+  }
+}

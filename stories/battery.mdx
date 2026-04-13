@@ -1,0 +1,170 @@
+---
+title: Battery
+description: A multi-surface intelligence platform powering investment decisions for a global VC firm.
+tags: [React.js, Python, Node.js, Chrome Extension]
+general_tags: [Web]
+hero_image: /img/success-stories/battery-ventures.png
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+slug: battery
+---
+
+<StoryHero
+  title="Battery"
+  description="A system of web apps, a Chrome extension, and a deep integration layer, built for a global VC investment team."
+  tags={["React.js", "Python", "Node.js", "Chrome Extension"]}
+  heroImage="/img/success-stories/battery-ventures.png"
+/>
+
+<ExecutiveSummary
+  sector="FinTech / Investment"
+  platforms={["Web", "Chrome Extension"]}
+  technology={["React.js", "Node.js", "Python"]}
+  websiteUrl="https://www.battery.com/"
+>
+Battery didn't need an app. They needed a **system of tools** to pull together fragmented data across **multiple interfaces**. Applift built it end to end: web apps, a Chrome extension, and an integration layer spanning **Crunchbase, Salesforce, GitHub**, and more.
+</ExecutiveSummary>
+
+## The challenge
+
+Battery's investment team works through the same questions daily: which companies are raising, who's behind them, what does the technical footprint look like. The answers were scattered. Company data in Crunchbase, relationship history in Salesforce, technical signals on GitHub, internal notes somewhere else.
+
+They needed one interface that could pull it all together, normalize it, and stay useful across browsers, tabs, and time zones. Simple on paper. Complicated in practice.
+
+<ProjectHighlights highlights={[
+  {
+    title: "Multi-surface architecture",
+    description: "Web apps and a Chrome extension sharing one backend and data layer.",
+    details: [
+      "Multiple web apps for different workflows",
+      "Chrome extension for in-browser access",
+      "Shared backend and data model"
+    ]
+  },
+  {
+    title: "Third party integrations",
+    description: "Continuous data pipelines to the platforms Battery already depends on.",
+    details: [
+      "Crunchbase for company data",
+      "Salesforce for deals and relationships",
+      "GitHub for technical signals",
+      "Additional proprietary sources"
+    ]
+  },
+  {
+    title: "Advanced query engine",
+    description: "Complex, multi-dimensional queries across all connected sources at once.",
+    details: [
+      "Cross-source search and filtering",
+      "Boolean and faceted queries",
+      "Millions of records"
+    ]
+  },
+  {
+    title: "Data dense interfaces",
+    description: "Power-user UI for large volumes of information.",
+    details: [
+      "High density tables and views",
+      "Contextual detail panels",
+      "Keyboard-driven workflows"
+    ]
+  },
+  {
+    title: "Full stack ownership",
+    description: "Applift owns the entire stack, from frontend to infrastructure.",
+    details: [
+      "React.js frontend",
+      "Node.js and Python backend",
+      "AWS infrastructure"
+    ]
+  },
+  {
+    title: "Global scale reliability",
+    description: "Used daily by investment professionals across time zones. It has to be up.",
+    details: [
+      "High availability",
+      "Global concurrent usage",
+      "Continuous delivery"
+    ]
+  }
+]} />
+
+## What we built
+
+The Battery platform is a set of tools pulling from the same data layer.
+
+The **web apps** handle deal research, portfolio analysis, and complex queries across sources. Built for people who live in investment data all day. Density and speed over visual minimalism.
+
+The **Chrome extension** brings it into the browser. An analyst on a company page or GitHub profile pulls up relevant data without switching tabs.
+
+Underneath sits a **backend** for data ingestion, normalization, and query processing. Data from Crunchbase, Salesforce, GitHub, and other sources flows through dedicated pipelines into a shared model.
+
+{/* <IntegrationEcosystem
+  heading="Integration ecosystem"
+  centerLabel="Battery Platform"
+  centerSubLabel="Unified data layer"
+  integrations={[
+    { name: "Crunchbase", category: "Company data", direction: "inbound" },
+    { name: "Salesforce", category: "CRM & deals", direction: "bidirectional" },
+    { name: "GitHub", category: "Technical signals", direction: "inbound" },
+    { name: "LinkedIn", category: "People data", direction: "inbound" },
+    { name: "Chrome Extension", category: "Browser surface", direction: "bidirectional" },
+    { name: "Internal APIs", category: "Proprietary data", direction: "bidirectional" }
+  ]}
+/> */}
+
+The integration layer is extensible. New data sources plug in without rearchitecting the pipeline. Same pattern every time: ingest, transform, index.
+
+## The query engine
+
+Investment professionals don't search like most users. They build queries like: "Series B healthcare companies that raised in the last 18 months, where we have a relationship, and engineering headcount grew 30%+."
+
+That hits multiple data sources, needs real time joins, and has to come back fast. The system uses indexed, pre-joined datasets with full text search, faceted filters, and boolean logic.
+
+The user just types and gets results. Making that work required careful data modeling, query optimization, and a UI that handles complex search without getting in the way.
+
+<Timeline
+  heading="The engagement"
+  variant="vertical"
+  phases={[
+    {
+      title: "Discovery & architecture",
+      description: "Mapping Battery's workflows, existing tools, and data landscape. Architecture, data model, and integration strategy defined before production code."
+    },
+    {
+      title: "Core platform & data layer",
+      description: "First web app and the backend powering all surfaces. Data ingestion and normalization patterns that every future integration reuses."
+    },
+    {
+      title: "Integration layer",
+      description: "Connecting Crunchbase, Salesforce, GitHub, and additional sources. Same pipeline pattern each time: ingest, transform, index, serve."
+    },
+    {
+      title: "Advanced query & UI",
+      description: "Query engine and power-user interfaces. Complex search, faceted filters, dense views, keyboard workflows."
+    },
+    {
+      title: "Chrome extension",
+      description: "Platform access from the browser without leaving context. Second surface, same data layer."
+    },
+    {
+      title: "Ongoing evolution",
+      description: "Continuous new capabilities and integrations, driven by how the team actually uses the platform."
+    }
+  ]}
+/>
+
+## The bigger picture
+
+Battery's platform was architected for extensibility from day one because the requirements were always going to change. Multiple web apps, a browser extension, half a dozen integrations, a custom query engine, dense interfaces, all running reliably for a global team that depends on it daily.
+
+Applift owns the full stack and works as an embedded engineering partner. They know the domain well enough to make architecture calls that hold up as the product grows.
+
+{/* <ImpactMetrics metrics={[
+  { value: "6+", label: "Integrations", description: "Crunchbase, Salesforce, GitHub, and more." },
+  { value: "Multi-App", label: "Platform", description: "Web apps and Chrome extension, one backend." },
+  { value: "Global", label: "Team Reach", description: "Investment professionals across time zones." },
+  { value: "Full-Stack", label: "Ownership", description: "React, Node.js, Python, AWS." },
+  { value: "Ongoing", label: "Partnership", description: "Continuous development." }
+]} /> */}
