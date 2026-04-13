@@ -1,59 +1,101 @@
 ---
 title: Medida
-description: AR-powered precision measurements for professional installers, optimized for real-world reliability.
+description: AR-powered precision measurements for professional installers, hardened for real-world reliability.
 tags: [iOS]
 general_tags: [iOS]
-hero_image: /img/success-stories/medida.png
+hero_image: /img/success-stories/medida_logo.svg
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
+slug: medida
 ---
 
 <StoryHero
   title="Medida"
-  description="AR-powered precision measurements for professional installers, optimized for real-world reliability."
+  description="AR-powered precision measurements for professional installers, hardened for real-world reliability."
   tags={["iOS"]}
-  heroImage="/img/success-stories/medida.png"
+  heroImage="/img/success-stories/medida_logo.svg"
 />
 
 <ExecutiveSummary
   sector="Construction Tech"
   platforms={["iOS"]}
   technology={["Swift", "ARKit"]}
-  logoUrl="/img/success-stories/medida/medida_logo.png"
-  websiteUrl="https://www.medida.app"
+  appStoreUrl="https://apps.apple.com/sa/app/medida/id6596766860"
+  logoUrl="/img/success-stories/medida_logo.svg"
+  websiteUrl="https://www.medida.ai/"
 >
-Medida's iOS app gives window and door installers **AR-powered measurements** on the job site. Applift helped make the experience faster, more reliable, and resilient enough to work in the field — even with inconsistent connectivity.
+Medida had a working iOS app for AR measurements, but uploads kept failing in the field. Applift fixed the upload system and tightened the AR pipeline **without a rebuild**.
 </ExecutiveSummary>
 
-## About
+Medida had already built an iOS application used by professional window and door installers to perform AR-based measurements in the field.
+But one part of the experience was breaking down.
+The app relied on uploading large image data, often in unstable connectivity conditions. Uploads were fragile, easily interrupted, and couldn't survive real usage like locking the device or switching apps.
 
-Window and door installation is unforgiving work. A measurement that's off by a centimeter means a return visit, a delayed job, a frustrated client. The professionals who do this work don't have room for tools that let them down — especially not on a job site with no reliable signal.
+For professionals on site, that's not just inconvenient. It's a reliability problem that directly affects their workflow.
 
-Medida had already built something real. Their iOS app used ARKit to let installers capture precise measurements on-site, generate reports, and move on. The core idea worked. But as the product reached more professional installers in the field, the gaps became harder to ignore. AR rendering had room to improve. The app's behavior under poor connectivity was unpredictable. High-res measurement files could be lost if the app exited at the wrong moment. For a consumer app, these would be rough edges. For a tool that professionals stake their work on, they were blockers.
-
-They brought in Applift not to rebuild, but to harden. The brief was to take a working product and make it professional-grade — the kind of tool installers reach for first because it's never let them down.
-
-That meant going deep on three fronts: tightening the AR measurement pipeline for accuracy and speed, building a background upload system that could survive device locks and dropped connections, and improving overall performance to the point where the app felt as solid as the work it supported.
+<PullQuote
+  quote="We partnered with Applift to enhance the reliability and efficiency of our iOS app. Applift worked closely with our team to optimize performance and improve overall user experience."
+  name="Jonathan Gilat"
+  role="CTO at Medida AI"
+  image="/img/success-stories/medida/Jonathan_Gilat.jpeg"
+/>
 
 <ImageGallery
-  featuredFirst
   heading={null}
   images={[
-    { src: "/img/success-stories/medida.png", alt: "Medida AR measurement app in use on a job site" }
+    { src: "/img/success-stories/medida/medida_img_1.svg", alt: "Medida AR measurement app in use on a job site" },
+    { src: "/img/success-stories/medida/medida_img_2.svg", alt: "Medida AR measurement app in use on a job site" }
   ]}
 />
 
-<ImpactMetrics metrics={[
-  { value: "Zero", label: "Data Loss in Field", description: "Background uploads ensure measurement files are never lost, even when the app exits or connectivity drops." },
-  { value: "ARKit", label: "Precision Optimized", description: "Refined AR rendering pipeline for accurate, reliable measurements during critical on-site use." },
-  { value: "Background", label: "Upload System", description: "High-res measurement files continue uploading after app exit or device lock — no manual retry required." }
+<ProjectHighlights highlights={[
+  {
+    title: "Background upload reliability",
+    description: "The upload system was redesigned using Background URL Sessions so transfers survive app closure and network drops.",
+    details: [
+      "Uploads continue even when the app is closed",
+      "Resilience to network interruptions",
+      "Zero loss of measurement data"
+    ]
+  },
+  {
+    title: "Upload pipeline refactor",
+    description: "Instead of patching the issue, the entire upload architecture was rethought from scratch.",
+    details: [
+      "Improved chunked upload handling",
+      "Better retry mechanisms",
+      "Clearer state management"
+    ]
+  },
+  {
+    title: "AR performance optimization",
+    description: "The ARKit-based measurement flow was refined alongside the networking work.",
+    details: [
+      "Improved rendering performance",
+      "Increased measurement accuracy",
+      "Reduced latency during capture"
+    ]
+  }
 ]} />
 
-## The Outcome
+## Behind the scenes
 
-The app that came out of the engagement was materially different from the one that went in — not in what it did, but in how reliably it did it. AR measurements that used to require multiple attempts now land cleanly. Files that used to depend on the installer staying in the app long enough to upload now move in the background, invisibly, regardless of what the device does next.
+This wasn't just a networking issue.
 
-For professionals, that distinction matters. A tool that works most of the time isn't a professional tool. Medida now has a product built to the same standard as the work it supports — one that installers can trust on every job, in every condition.
+The team had to work within iOS background execution limits, handle large media files split into chunks, and deal with real conditions: bad connectivity, app interruptions, a live production system used by professionals every day.
 
-{/* PullQuote — add when real stakeholder quotes are available */}
+At the same time, Applift's engineers integrated alongside Medida's internal team, working in parallel without disrupting ongoing development.
+
+## The outcome
+
+What was once a fragile, interruption-prone upload process is now a system installers don't think about. Capture measurements, upload the data, move to the next job. The file gets there.
+
+Medida didn't have to start over. They got targeted fixes on the parts that mattered most, and their team kept shipping the rest of the product the whole time.
+
+<PullQuote
+  quote="The collaboration with Applift was seamless. Their team communicated proactively and integrated smoothly with our internal team. Their contribution had a significant impact on the quality of our app."
+  name="Jonathan Gilat"
+  role="CTO at Medida AI"
+  image="/img/success-stories/medida/Jonathan_Gilat.jpeg"
+/>

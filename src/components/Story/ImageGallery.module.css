@@ -46,6 +46,21 @@
   object-fit: cover;
 }
 
+/* Multiple images: render at natural size, centered */
+.figureCentered {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageCentered {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 .caption {
   font-size: 0.8rem;
   color: var(--ss-text-muted);

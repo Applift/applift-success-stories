@@ -17,14 +17,14 @@ interface ImageGalleryProps {
   heading?: string | null;
 }
 
-function GalleryFigure({ img }: { img: GalleryImage }): React.JSX.Element {
+function GalleryFigure({ img, centered = false }: { img: GalleryImage; centered?: boolean }): React.JSX.Element {
   const resolved = useBaseUrl(img.src);
   return (
-    <figure className={styles.figure}>
+    <figure className={centered ? styles.figureCentered : styles.figure}>
       <img
         src={resolved}
         alt={img.alt}
-        className={styles.image}
+        className={centered ? styles.imageCentered : styles.image}
         loading="lazy"
       />
       {img.caption && (
@@ -58,7 +58,7 @@ export default function ImageGallery({
             }
           >
             {rest.map((img, i) => (
-              <GalleryFigure key={i} img={img} />
+              <GalleryFigure key={i} img={img} centered />
             ))}
           </div>
         )}
@@ -74,7 +74,7 @@ export default function ImageGallery({
         style={{ '--gallery-columns': columns } as React.CSSProperties}
       >
         {images.map((img, i) => (
-          <GalleryFigure key={i} img={img} />
+          <GalleryFigure key={i} img={img} centered={images.length > 1} />
         ))}
       </div>
     </section>

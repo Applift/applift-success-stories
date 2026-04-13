@@ -10,6 +10,7 @@ import Partnership from '@site/src/components/Story/Partnership';
 import InlineQuote from '@site/src/components/Story/InlineQuote';
 import PullQuote from '@site/src/components/Story/PullQuote';
 import Timeline from '@site/src/components/Story/Timeline';
+import ProjectHighlights from '@site/src/components/Story/ProjectHighlights';
 
 export default {
   ...MDXComponents,
@@ -24,4 +25,5 @@ export default {
   PullQuote,
   Timeline,
   Testimonial,
+  ProjectHighlights,
 };
