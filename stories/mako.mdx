@@ -1,7 +1,7 @@
 ---
 title: Mako
-description: Working with the Mako frontend team to build 12+ smart TV and web apps.
-tags: [React.js, Next.js, Smart TV]
+description: Worked inside Mako's frontend team to build 12+ streaming apps for smart TVs and web.
+tags: [React.js, Next.js, Smart TV, HLS]
 general_tags: [Web]
 hero_image: /img/success-stories/mako.jpeg
 hide_table_of_contents: true
@@ -11,62 +11,70 @@ pagination_prev: null
 
 <StoryHero
   title="Mako"
-  description="Building 12+ smart TV and web applications for Israel's No.1 streaming platform, serving 20M+ monthly views."
-  tags={["React.js", "Next.js", "Smart TV"]}
+  description="Worked inside the frontend team behind 12+, Israel's #1 streaming platform, across Samsung, LG, Hisense, and web."
+  tags={["React.js", "Next.js", "Smart TV", "HLS"]}
   heroImage="/img/success-stories/mako.jpeg"
 />
 
-<ExecutiveSummary>
-Powering Israel's leading streaming platform with **12+ smart TV and web applications**, serving **20M+ monthly views** with a seamless cross-platform experience.
+<ExecutiveSummary
+  sector="Media & Streaming"
+  platforms={["Samsung Tizen", "LG webOS", "Hisense VIDAA", "Web"]}
+  technology={["React.js", "Next.js", "HLS"]}
+>
+Applift engineers worked inside Mako's frontend team, building and maintaining the 12+ apps across smart TVs and web, from video player internals to store submissions.
 </ExecutiveSummary>
 
-<Challenge glanceItems={[
-  { label: "Platform", value: "Smart TVs, Web" },
-  { label: "Tech Stack", value: "React.js, Next.js" },
-  { label: "Key Outcome", value: "20M+ Monthly Views" }
-]}>
-Mako is the Keshet Media Group's digital arm and one of Israel's top three most visited websites. Their streaming platform, 12+, needed to deliver live and VOD content reliably across a wide range of smart TV platforms and web browsers — each with different capabilities and constraints. The challenge was building and maintaining 12+ applications with a consistent, high-performance streaming experience across all devices.
-</Challenge>
+12+ is Israel's biggest streaming platform. Channel 12 live broadcasts, news, reality, comedy, drama on demand. Mako, Keshet Media Group's digital side, pulls in over 20M views a month across web and connected TV.
+
+Applift's engineers worked inside Mako's frontend group. They were in the standups, in the code reviews, making architecture calls alongside everyone else.
 
 <Partnership>
-This is one of Applift's longest-running partnerships. Rather than operating as an external vendor, the team embedded directly within Mako's frontend group — working side by side on sprints, code reviews, and product decisions. The relationship is built on deep trust and continuity: the same engineers who built the first smart TV apps are still shipping features today.
+This was one of Applift's longest running partnerships. The same engineers who built the first smart TV apps kept shipping features for years. They knew the codebases, the platform quirks, and the team's way of working. A new device or OS version didn't require weeks of onboarding.
 
-What makes this partnership work is shared ownership. Applift engineers don't just take tickets — they contribute to architectural decisions, propose improvements, and hold the same quality bar as the in-house team. When a new platform needs support or a live broadcast demands reliability, the response is immediate and collaborative.
+When a live broadcast needed to work or a new TV platform needed support, the engineers already had context. They picked it up and shipped it.
 </Partnership>
 
-<Solution clientInfo={{ description: "Mako is Keshet Media Group's digital arm and one of Israel's top three most visited websites, with 20M+ views per month." }}>
-
-**Smart TV Applications**
-
-Building and maintaining applications across a wide range of smart TV platforms with a consistent streaming experience.
-
-**Web Applications**
-
-High-performance web apps using React.js and Next.js to serve millions of monthly viewers.
-
-**Live & VOD Streaming**
-
-Reliable live streaming and video-on-demand for Channel 12's full content library, from news to prime-time entertainment.
-
-**Cross-Platform Consistency**
-
-Unified user experience across smart TVs, web browsers, and diverse device form factors at scale.
-</Solution>
-
-{/* <ImageGallery images={[
-  { src: "/img/success-stories/mako-screen-1.png", alt: "Mako streaming interface" },
-  { src: "/img/success-stories/mako-screen-2.png", alt: "Mako smart TV app" }
-]} /> */}
-
-<ImpactMetrics metrics={[
-  { value: "12+", label: "Applications", description: "Smart TV and web applications built and maintained for the 12+ streaming platform." },
-  { value: "20M+", label: "Monthly Views", description: "Serving Israel's largest streaming audience with reliable, high-performance applications." },
-  { value: "#1", label: "Streaming Platform", description: "Powering Israel's leading streaming platform for Channel 12 live and VOD content." }
+<ProjectHighlights highlights={[
+  {
+    title: "HLS video player",
+    description: "Custom player with HLS streaming, adaptive bitrate, and error recovery tuned per TV platform.",
+    details: [
+      "Handled stream interruptions during live broadcasts without dropping the user",
+      "Adaptive bitrate for unstable network conditions",
+      "Player behavior tuned separately for each TV OS"
+    ]
+  },
+  {
+    title: "Samsung, LG, and Hisense apps",
+    description: "Three TV platforms, three different sets of APIs, input models, and OS quirks. All maintained in parallel.",
+    details: [
+      "Remote control input handling specific to each platform",
+      "Memory management for TV environments with tight constraints",
+      "Shared UX patterns adapted to each platform's capabilities"
+    ]
+  },
+  {
+    title: "Legacy OS performance",
+    description: "Older smart TVs have less memory and slower processors. The apps still needed to run well on them.",
+    details: [
+      "UI tuned for low-end hardware",
+      "Smaller memory footprint on legacy devices",
+      "Rendering optimizations that kept the experience usable"
+    ]
+  },
+  {
+    title: "Store submissions",
+    description: "Each TV manufacturer has its own app store with its own requirements. We managed the full cycle.",
+    details: [
+      "Samsung, LG, and Hisense store guidelines and compliance",
+      "QA and submission process for each platform",
+      "Kept up with changing store policies over time"
+    ]
+  }
 ]} />
 
-{/* <Testimonial
-  quote="Quote from Mako stakeholder about Applift's contribution."
-  name="Stakeholder Name"
-  role="Role, Mako"
-  image="/img/testimonials/mako.jpg"
-/> */}
+{/* <ImpactMetrics metrics={[
+  { value: "3+", label: "Smart TV Platforms", description: "Samsung Tizen, LG webOS, and Hisense VIDAA apps built and maintained." },
+  { value: "20M+", label: "Monthly Views", description: "Across all platforms, live and on demand." },
+  { value: "Live + VOD", label: "Streaming Modes", description: "Live broadcasts and the full Channel 12 on demand library." }
+]} /> */}
