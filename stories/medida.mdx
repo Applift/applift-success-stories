@@ -28,6 +28,8 @@ slug: medida
 Medida had a working iOS app for AR measurements, but uploads kept failing in the field. Applift fixed the upload system and tightened the AR pipeline **without a rebuild**.
 </ExecutiveSummary>
 
+## About
+
 Medida had already built an iOS application used by professional window and door installers to perform AR-based measurements in the field.
 But one part of the experience was breaking down.
 The app relied on uploading large image data, often in unstable connectivity conditions. Uploads were fragile, easily interrupted, and couldn't survive real usage like locking the device or switching apps.
@@ -45,9 +47,17 @@ For professionals on site, that's not just inconvenient. It's a reliability prob
   featuredFirst
   heading={null}
   images={[
-    { src: "/img/success-stories/medida/medida_img.svg", alt: "Medida AR measurement app in use on a job site" }
+    { src: "/img/success-stories/medida/medida_img.png", alt: "Medida AR measurement app in use on a job site" }
   ]}
 />
+
+## Behind the scenes
+
+This wasn't just a networking issue.
+
+The team had to work within iOS background execution limits, handle large media files split into chunks, and deal with real conditions: bad connectivity, app interruptions, a live production system used by professionals every day.
+
+At the same time, Applift's developers integrated alongside Medida's internal team, working in parallel without disrupting ongoing development.
 
 <ProjectHighlights highlights={[
   {
@@ -78,14 +88,6 @@ For professionals on site, that's not just inconvenient. It's a reliability prob
     ]
   }
 ]} />
-
-## Behind the scenes
-
-This wasn't just a networking issue.
-
-The team had to work within iOS background execution limits, handle large media files split into chunks, and deal with real conditions: bad connectivity, app interruptions, a live production system used by professionals every day.
-
-At the same time, Applift's engineers integrated alongside Medida's internal team, working in parallel without disrupting ongoing development.
 
 ## The outcome
 
