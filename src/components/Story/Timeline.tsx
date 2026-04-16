@@ -4,6 +4,7 @@ import styles from './Timeline.module.css';
 interface TimelinePhase {
   title: string;
   description: string;
+  label?: string;
 }
 
 interface TimelineProps {
@@ -31,7 +32,7 @@ export default function Timeline({
               <span className={styles.markerNumber}>{i + 1}</span>
             </div>
             <div className={styles.content}>
-              <div className={styles.phaseLabel}>Phase {i + 1}</div>
+              <div className={styles.phaseLabel}>{phase.label ?? `Phase ${i + 1}`}</div>
               <h3 className={styles.phaseTitle}>{phase.title}</h3>
               <p className={styles.phaseDescription}>{phase.description}</p>
             </div>
