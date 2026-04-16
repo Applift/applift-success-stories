@@ -29,10 +29,9 @@ export default function Timeline({
         {phases.map((phase, i) => (
           <li key={i} className={styles.item}>
             <div className={styles.marker}>
-              <span className={styles.markerNumber}>{i + 1}</span>
+              <span className={styles.markerNumber}>{phase.label ?? i + 1}</span>
             </div>
             <div className={styles.content}>
-              <div className={styles.phaseLabel}>{phase.label ?? `Phase ${i + 1}`}</div>
               <h3 className={styles.phaseTitle}>{phase.title}</h3>
               <p className={styles.phaseDescription}>{phase.description}</p>
             </div>

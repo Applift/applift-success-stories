@@ -22,7 +22,7 @@
 .vertical::before {
   content: '';
   position: absolute;
-  left: 19px;
+  left: 31px;
   top: 10px;
   bottom: 10px;
   width: 2px;
@@ -37,7 +37,7 @@
 .vertical .item {
   position: relative;
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 64px 1fr;
   gap: 1.25rem;
   padding: 0 0 2rem 0;
 }
@@ -49,14 +49,16 @@
 .vertical .marker {
   position: relative;
   z-index: 1;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
-  border-radius: 50%;
+  padding: 0 0.75rem;
+  border-radius: 999px;
   background: var(--ifm-color-primary);
   color: #ffffff;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  justify-self: center;
   box-shadow: 0 0 0 4px var(--ss-bg);
 }
 
@@ -103,15 +105,17 @@
 }
 
 .horizontal .marker {
-  width: 36px;
+  min-width: 36px;
   height: 36px;
-  border-radius: 50%;
+  padding: 0 0.625rem;
+  border-radius: 999px;
   background: var(--ss-surface-container);
   color: var(--ifm-color-primary);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.25rem;
+  align-self: flex-start;
 }
 
 .horizontal .markerNumber {
@@ -127,16 +131,6 @@
 }
 
 /* ===== Shared inner text ===== */
-.phaseLabel {
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ifm-color-primary);
-  margin-bottom: 0.25rem;
-}
-
 .phaseTitle {
   font-family: 'Manrope', sans-serif;
   font-size: 1.15rem;
@@ -159,16 +153,17 @@
   }
 
   .vertical .item {
-    grid-template-columns: 32px 1fr;
+    grid-template-columns: 56px 1fr;
     gap: 1rem;
   }
 
   .vertical::before {
-    left: 15px;
+    left: 27px;
   }
 
   .vertical .marker {
-    width: 32px;
+    min-width: 32px;
     height: 32px;
+    padding: 0 0.5rem;
   }
 }
