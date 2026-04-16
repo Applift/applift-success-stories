@@ -42,7 +42,7 @@ export default function ExecutiveSummary({
         </div>
         {hasMeta && (
           <aside className={styles.meta}>
-            {logoUrl && (
+            {/* {logoUrl && (
               websiteUrl ? (
                 <a
                   href={websiteUrl}
@@ -58,7 +58,7 @@ export default function ExecutiveSummary({
                   <img src={resolvedLogo} alt="Client logo" />
                 </div>
               )
-            )}
+            )} */}
             {sector && (
               <div className={styles.metaItem}>
                 <span className={styles.metaLabel}>Sector</span>
@@ -86,6 +86,14 @@ export default function ExecutiveSummary({
               <a href={playStoreUrl} target="_blank" rel="noopener noreferrer" className={styles.appStoreBadge}>
                 <img src={playStoreBadgeSrc} alt="Get it on google play store" />
               </a>
+            )}
+            {websiteUrl && (
+              <>
+                <div className={styles.divider} />
+                <div className={styles.metaItem}>
+                  <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className={styles.metaValue}>Visit their website</a>
+                </div>
+              </>
             )}
           </aside>
         )}

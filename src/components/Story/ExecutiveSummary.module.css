@@ -51,6 +51,16 @@
   color: var(--ss-summary-text, #ffffff);
 }
 
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 0.5rem 0;
+}
+
+[data-theme='dark'] .divider {
+  background: var(--ss-outline-variant);
+}
+
 [data-theme='dark'] .meta {
   border-left-color: var(--ss-outline-variant);
 }
