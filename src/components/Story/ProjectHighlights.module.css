@@ -11,9 +11,14 @@
   margin: 0 0 1.5rem;
 }
 
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
 
@@ -106,6 +111,6 @@
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
