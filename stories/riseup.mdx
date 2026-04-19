@@ -30,30 +30,12 @@ Over four years, we shipped two apps across two markets for RiseUp: native iOS a
  
 RiseUp is a financial wellness platform that helps people take control of their money through a community-driven approach, originally built for the web. They came to us in 2022 when their users were shifting to mobile and they needed a long-term engineering partner to lead their mobile department.
 
-{/* ## Choosing the Platform
- 
-After working through the long-term roadmap with RiseUp's team, we committed to a fully native approach. Flutter or React Native would have shipped faster, but RiseUp's product was dense, highly interactive, and heavy on motion. Platform-specific fidelity mattered. On iOS that meant SwiftUI. On Android, Jetpack Compose. Both modern, both declarative, both chosen because we knew we'd be leaning on animation and polish, and we didn't want to fight our tools to get it. */}
-
 <PullQuote
   quote="They didn't just write code. They shaped the architecture, refined features, and ensured best practices, always bringing a thoughtful and proactive approach. Their seamless collaboration and dedication made them an essential part of our journey."
   name="Iftach Bar"
   role="CTO, RiseUp"
   image="/img/success-stories/riseup/riseup_iftach.jpeg"
 />
-
-  <ImageCarousel
-     items={[
-      { src: '/img/success-stories/riseup/riseup_gif_1.gif', alt: 'Live demo' },
-      { src: '/img/success-stories/riseup/riseup_gif_2.gif', alt: 'Live demo' },
-      { src: '/img/success-stories/riseup/riseup_gif_3.gif', alt: 'Live demo' },
-    ]}
-   />
-
-## Building the Platform and the Team
-
-We embedded a squad of senior mobile engineers directly inside RiseUp, operating as an extension of their product team rather than an outside shop delivering tickets. While the native builds were in progress, we ran technical recruiting and onboarding for RiseUp's internal mobile group in parallel. New hires came into a codebase that already had standards, conventions, and real code review happening against it. Architectural decisions got shared in real time instead of inherited from a doc. The team and the platform matured together, which is the only way a handoff actually works later.
-
-The UK build was the one we'd been setting ourselves up to make from day one: dense flows, heavy animation work, screen transitions that don't survive a cross-platform wrapper. SwiftUI and Jetpack Compose gave our engineers room to do the detail work, the micro-interactions, easing curves, and state transitions, at the level the product needed. Then, with the UK live and the internal team established, we turned to Israel: a Flutter application for users who had been on the web product for years and asking for an app for most of it, with localized in-app purchase flows. The team that had just shipped two native apps stepped into a cross-platform build without losing a beat, because they'd already lived on both sides.
 
 <Timeline
   variant="vertical"
@@ -81,6 +63,23 @@ The UK build was the one we'd been setting ourselves up to make from day one: de
     }
   ]}
 />
+
+## Building the Platform
+
+The UK build was the one we'd been setting ourselves up to make from day one: dense flows, heavy animation work, screen transitions that don't survive a cross-platform wrapper. SwiftUI and Jetpack Compose gave our engineers room to do the detail work, the micro-interactions, easing curves, and state transitions, at the level the product needed. Then, with the UK live and the internal team established, we turned to Israel: a Flutter application for users who had been on the web product for years and asking for an app for most of it, with localized in-app purchase flows. The team that had just shipped two native apps stepped into a cross-platform build without losing a beat, because they'd already lived on both sides.
+
+
+  <ImageCarousel
+     items={[
+      { src: '/img/success-stories/riseup/riseup_gif_1.gif', alt: 'Live demo' },
+      { src: '/img/success-stories/riseup/riseup_gif_2.gif', alt: 'Live demo' },
+      { src: '/img/success-stories/riseup/riseup_gif_3.gif', alt: 'Live demo' },
+    ]}
+   />
+
+## Building the Team
+
+We embedded a squad of senior mobile engineers directly inside RiseUp, operating as an extension of their product team rather than an outside shop delivering tickets. While the builds were in progress, we ran technical recruiting and onboarding for RiseUp's internal mobile group in parallel. New hires came into a codebase that already had standards and conventions. Architectural decisions got shared in real time instead of inherited from a doc. The team and the platform matured together, which is the only way a handoff actually works later.
 
 ## The Outcome
 
