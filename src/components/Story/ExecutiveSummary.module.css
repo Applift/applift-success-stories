@@ -75,8 +75,8 @@
 
 .appStoreBadge img {
   display: block;
-  width: 95px;
-  height: auto;
+  height: 32px;
+  width: auto;
 }
 
 .logo {

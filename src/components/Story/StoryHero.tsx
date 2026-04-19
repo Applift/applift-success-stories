@@ -12,7 +12,6 @@ interface StoryHeroProps {
 export default function StoryHero({
   title,
   description,
-  tags = [],
   heroImage,
 }: StoryHeroProps): React.JSX.Element {
   const resolvedImage = useBaseUrl(heroImage ?? '');
