@@ -4,6 +4,7 @@ import ExecutiveSummary from '@site/src/components/Story/ExecutiveSummary';
 import Challenge from '@site/src/components/Story/Challenge';
 import Solution from '@site/src/components/Story/Solution';
 import ImageGallery from '@site/src/components/Story/ImageGallery';
+import ImageCarousel from '@site/src/components/Story/ImageCarousel';
 import ImpactMetrics from '@site/src/components/Story/ImpactMetrics';
 import Testimonial from '@site/src/components/Story/Testimonial';
 import Partnership from '@site/src/components/Story/Partnership';
@@ -21,6 +22,7 @@ export default {
   Partnership,
   Solution,
   ImageGallery,
+  ImageCarousel,
   ImpactMetrics,
   InlineQuote,
   PullQuote,
