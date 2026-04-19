@@ -3,6 +3,23 @@
   max-width: 75vw;
 }
 
+@media (max-width: 1200px) {
+  .section {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    max-width: 100vw;
+  }
+
+  .slot {
+    width: 50%;
+    height: 90%;
+  }
+}
+
 .heading {
   font-family: 'Manrope', sans-serif;
   font-size: 1.75rem;

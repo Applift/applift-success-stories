@@ -117,7 +117,7 @@ export default function ImageCarousel({
     if (paused || n <= 1) return;
     const activeItem = items[activeIndex];
     const gifMs = isGif(activeItem.src) ? gifDurations[activeIndex] ?? 0 : 0;
-    const delay = Math.max(interval, gifMs);
+    const delay = gifMs > 0 ? gifMs : interval;
     const id = window.setTimeout(() => {
       setActiveIndex((i) => (i + 1) % n);
     }, delay);
@@ -194,7 +194,7 @@ export default function ImageCarousel({
             const src = useFrozen ? frozen[i] : withBaseUrl(item.src);
             const scale = isCenter ? 1.25 : 0.8;
             const style: React.CSSProperties = {
-              transform: `translate(-50%, -50%) translateX(${off * 75}%) scale(${scale})`,
+              transform: `translate(-50%, -50%) translateX(${off * 95}%) scale(${scale})`,
               opacity: visible ? (isCenter ? 1 : 0.55) : 0,
               zIndex: isCenter ? 2 : 1,
               pointerEvents: visible ? 'auto' : 'none',
