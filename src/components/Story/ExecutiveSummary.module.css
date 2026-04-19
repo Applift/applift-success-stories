@@ -73,10 +73,37 @@
   color: var(--ss-text-primary);
 }
 
+.websiteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ss-summary-text, #ffffff);
+}
+
+.websiteLink:hover {
+  text-decoration: underline;
+}
+
+.websiteIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+}
+
+[data-theme='dark'] .websiteLink {
+  color: var(--ss-text-primary);
+}
+
 .appStoreBadge img {
   display: block;
   height: 32px;
-  width: auto;
+  width: 95px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .logo {
