@@ -43,9 +43,9 @@
 }
 
 .image {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: contain;
+  max-width: 100%;
   border-radius: 12px;
   display: block;
   border: 1px solid var(--ss-outline-variant);
