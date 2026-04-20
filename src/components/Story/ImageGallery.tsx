@@ -71,7 +71,7 @@ export default function ImageGallery({
   images,
   columns = 2,
   featuredFirst = false,
-  heading = 'Screenshots',
+  heading = '',
   width = 100,
 }: ImageGalleryProps): React.JSX.Element {
   const sectionStyle: React.CSSProperties = width !== 100

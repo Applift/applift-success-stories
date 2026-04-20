@@ -3,7 +3,7 @@ title: OpenWeb
 description: SDK for the '#1' conversation tool in the world.
 tags: [iOS, Android, React Native]
 general_tags: [iOS, Android, Cross-Platform]
-hero_image: /img/success-stories/openweb-temp-hero.png
+hero_image: /img/success-stories/openweb.png
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -11,9 +11,9 @@ pagination_prev: null
 
 <StoryHero
   title="OpenWeb"
-  description="Developing cross-platform SDKs for the #1 conversation tool in the world — 1,000+ publishers, 100M+ monthly active users."
+  description="Developing cross-platform SDKs for the #1 conversation tool in the world - 1,000+ publishers, 100M+ monthly active users."
   tags={["iOS", "Android", "React Native"]}
-  heroImage="/img/success-stories/openweb-temp-hero.png"
+  heroImage="/img/success-stories/openweb.png"
 />
 
 <ExecutiveSummary
@@ -35,14 +35,50 @@ All three platforms needed to ship in parallel: iOS, Android, and React Native.
 
 Applift's engineers joined OpenWeb's mobile group and worked across all three SDKs at once. Shared review practices and consistent standards kept the work coherent even as it spread across separate codebases. Speed mattered, but not at the cost of the quality bar that 1,000+ publishers were depending on.
 
+
 <ImageGallery
+  featuredFirst
+  images={[
+    { src: "/img/success-stories/openweb/open-web-img.png", alt: "OpenWeb conversation SDK image 1" }
+  ]}
+  width="75"
+/>
+
+<Timeline
+  variant="vertical"
+  heading="The Timeline"
+  phases={[
+    {
+      label: "2021",
+      title: "Partnership launched - full SDK ownership",
+      description: "Partnered with OpenWeb and assumed full ownership of their iOS and Android SDKs, establishing a dedicated mobile development track from day one."
+    },
+    {
+      label: "2022",
+      title: "OpenWeb builds an internal mobile team",
+      description: "OpenWeb recruited their own in-house mobile team - starting with a mobile architect and growing to four additional members. Our team collaborates closely with this team, jointly driving the development of iOS SDK v2."
+    },
+    {
+      label: "2025",
+      title: "React Native SDK - zero to production",
+      description: "When the need arose for a React Native SDK wrapping both native SDKs, our team took full ownership of the initiative and shipped it to production in just five months."
+    },
+    {
+      label: "2026+",
+      title: "Ongoing roadmap partnership",
+      description: "Continuing the collaboration with a focus on iOS and React Native SDK roadmap delivery, feature development, and long-term platform evolution."
+    }
+  ]}
+/>
+
+{/* <ImageGallery
   heading={null}
   columns={2}
   images={[
     { src: "/img/success-stories/openweb/open-web-img-1.svg", alt: "OpenWeb conversation SDK image 1" },
     { src: "/img/success-stories/openweb/open-web-img-2.svg", alt: "OpenWeb conversation SDK image 2" }
   ]}
-/>
+/> */}
 
 <ImpactMetrics metrics={[
   { value: "1,000+", label: "Publishers", description: "Top-tier publishers using OpenWeb's conversation SDKs across their mobile apps." },
@@ -56,4 +92,4 @@ Three production SDKs, all running in parallel: native iOS, native Android, and 
 
 The architecture handles real diversity. Publishers come in with wildly different stacks and requirements, and the SDKs absorb that without forcing a lowest-common-denominator experience. That's what let the platform scale to where it is.
 
-{/* PullQuote — add when real stakeholder quotes are available */}
+{/* PullQuote - add when real stakeholder quotes are available */}
