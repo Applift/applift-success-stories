@@ -98,6 +98,37 @@
   color: var(--ss-text-primary);
 }
 
+.sdkDocsRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.15rem;
+}
+
+.sdkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--ss-summary-text, #ffffff);
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.sdkIcon:hover {
+  opacity: 1;
+}
+
+.sdkIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+[data-theme='dark'] .sdkIcon {
+  color: var(--ss-text-primary);
+}
+
 .appStoreBadge img {
   display: block;
   height: 32px;
