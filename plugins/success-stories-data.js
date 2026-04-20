@@ -12,7 +12,8 @@ module.exports = function successStoriesDataPlugin(context) {
         .readdirSync(storiesDir)
         .filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
 
-      const pinnedOrder = ['jotit', 'riseup', 'mako', 'openweb', 'unit'];
+      const pinnedFirst = ['jotit', 'riseup', 'mako', 'openweb', 'unit'];
+      const pinnedLast = ['battery'];
 
       const stories = files.map((file) => {
         const raw = fs.readFileSync(path.join(storiesDir, file), 'utf-8');
@@ -31,11 +32,15 @@ module.exports = function successStoriesDataPlugin(context) {
       });
 
       return stories.sort((a, b) => {
-        const ai = pinnedOrder.indexOf(a.slug);
-        const bi = pinnedOrder.indexOf(b.slug);
+        const ai = pinnedFirst.indexOf(a.slug);
+        const bi = pinnedFirst.indexOf(b.slug);
+        const aLast = pinnedLast.includes(a.slug);
+        const bLast = pinnedLast.includes(b.slug);
         if (ai !== -1 && bi !== -1) return ai - bi;
         if (ai !== -1) return -1;
         if (bi !== -1) return 1;
+        if (aLast && !bLast) return 1;
+        if (!aLast && bLast) return -1;
         return 0;
       });
     },
