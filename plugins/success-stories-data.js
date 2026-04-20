@@ -12,7 +12,9 @@ module.exports = function successStoriesDataPlugin(context) {
         .readdirSync(storiesDir)
         .filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
 
-      return files.map((file) => {
+      const pinnedOrder = ['jotit', 'riseup', 'mako', 'openweb', 'unit'];
+
+      const stories = files.map((file) => {
         const raw = fs.readFileSync(path.join(storiesDir, file), 'utf-8');
         const {data} = matter(raw);
         const slug = file.replace(/\.mdx?$/, '');
@@ -26,6 +28,15 @@ module.exports = function successStoriesDataPlugin(context) {
           general_tags: data.general_tags ?? [],
           results: data.results,
         };
+      });
+
+      return stories.sort((a, b) => {
+        const ai = pinnedOrder.indexOf(a.slug);
+        const bi = pinnedOrder.indexOf(b.slug);
+        if (ai !== -1 && bi !== -1) return ai - bi;
+        if (ai !== -1) return -1;
+        if (bi !== -1) return 1;
+        return 0;
       });
     },
 
