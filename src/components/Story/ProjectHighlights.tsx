@@ -41,7 +41,7 @@ export default function ProjectHighlights({
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>{heading}</h2>
+      {heading && <h2 className={styles.heading}>{heading}</h2>}
       <div className={styles.rows}>
         {rows.map((row, ri) => (
           <div
