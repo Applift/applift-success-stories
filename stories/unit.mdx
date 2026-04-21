@@ -31,26 +31,56 @@ Production-grade iOS, Android, and React Native SDKs that Unit's clients ship in
 
 Unit is the banking-as-a-service platform that lets companies embed financial features directly into their products. Its white-label UIs provide pre-built, customizable components that let Unit's clients build in minutes and launch in weeks.
 
-## Native SDK Engineering
+<ImageCarousel
+  items={[
+    { src: '/img/success-stories/unit/unit-whitelabel-1.png', alt: 'Unit white label 1' },
+    { src: '/img/success-stories/unit/unit-whitelabel-2.png', alt: 'Unit white label 2' },
+    { src: '/img/success-stories/unit/unit-whitelabel-3.png', alt: 'Unit white label 3' },
+  ]}
+/>
 
-We are the mobile team behind Unit's client-facing SDKs, working in lockstep with Unit's internal web team. Applift owns the native mobile surface area end-to-end: architecture, development, and ongoing evolution. These SDKs are shipped inside the production apps of Unit's clients.
+## SDK Engineering
 
-* **Architecture & Development:** We lead the technical architecture and implementation of the iOS SDK in Swift and the Android SDK in Kotlin, with a focus on a lightweight footprint, strict API boundaries, and the reliability required for financial services.
-* **Digital Wallet Provisioning:** We built push-provisioning flows that issue cards directly into **Apple Wallet**, **Google Pay**, and **Samsung Pay** via **Visa push provisioning**, handling the platform-specific cryptography, entitlements, and certification requirements each wallet demands.
-* **DevOps & Distribution:** We own the full release pipeline, from automated testing and versioning to binary distribution, so Unit's clients receive stable, well-tagged releases they can integrate with confidence.
-* **Developer Experience:** We treat the SDKs as a product for developers. Public APIs, error surfaces, and sample code are designed for fast, unambiguous integration into client applications.
+We are the mobile team behind Unit's client-facing SDKs, working in lockstep with Unit's internal web team. From day one, iOS (Swift), Android (Kotlin), and React Native have been developed in parallel, with full ownership of architecture, development, and ongoing evolution. The SDKs ship inside the production apps of Unit's clients.
 
-## Cross-Platform SDK (React Native)
-
-Alongside the native work, we are building a React Native SDK that wraps the underlying iOS and Android implementations. Cross-platform teams get the full native feature set through an idiomatic React Native surface, without us forking the business logic across stacks.
-
-  <ImageCarousel
-     items={[
-      { src: '/img/success-stories/unit/unit-whitelabel-1.png', alt: 'Unit white label 1' },
-      { src: '/img/success-stories/unit/unit-whitelabel-2.png', alt: 'Unit white label 2' },
-      { src: '/img/success-stories/unit/unit-whitelabel-3.png', alt: 'Unit white label 3' },
-    ]}
-   />
+<ProjectHighlights highlights={[
+  {
+    title: "Three platforms, one surface",
+    description: "iOS, Android, and React Native built side by side so every feature lands across the full SDK surface at the same time.",
+    details: [
+      "Swift on iOS, Kotlin on Android",
+      "React Native wrapping the native implementations",
+      "Shared API shape across all three platforms"
+    ]
+  },
+  {
+    title: "Digital wallet provisioning",
+    description: "Push-provisioning flows that issue cards directly into Apple Wallet, Google Pay, and Samsung Pay via Visa push provisioning.",
+    details: [
+      "Apple Wallet, Google Pay, and Samsung Pay",
+      "Visa push provisioning end-to-end",
+      "Platform-specific cryptography, entitlements, and certification"
+    ]
+  },
+  {
+    title: "Release pipeline in CI",
+    description: "A full CI release pipeline that publishes tagged, verified builds to the package managers Unit's clients integrate with.",
+    details: [
+      "CocoaPods and Swift Package Manager for iOS",
+      "NPM for React Native",
+      "Internal sample apps distributed for QA and marketing"
+    ]
+  },
+  {
+    title: "Integration-first documentation",
+    description: "Every SDK ships with an implementation guide written for the developers integrating it, so client teams reach a working integration without friction.",
+    details: [
+      "Step-by-step implementation guide per SDK",
+      "Sample code and clear error surfaces",
+      "Kept in sync with each release"
+    ]
+  }
+]} />
 
 ## Partnering with Unit's Clients
 
