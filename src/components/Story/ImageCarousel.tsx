@@ -102,7 +102,7 @@ function parseGifDurationMs(bytes: Uint8Array): number {
 
 export default function ImageCarousel({
   items,
-  interval = 8000,
+  interval = 4000,
   aspectRatio = '16 / 9',
   heading = null,
 }: ImageCarouselProps): React.JSX.Element | null {

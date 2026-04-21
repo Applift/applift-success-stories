@@ -25,53 +25,37 @@ pagination_prev: null
 Production-grade native SDKs that let Unit's clients embed banking features in their apps, including digital wallet provisioning to Apple Wallet, Google Pay, and Samsung Pay via Visa push provisioning.
 </ExecutiveSummary>
 
-<Challenge glanceItems={[
-  { label: "Platforms", value: "iOS, Android" },
-  { label: "Integrations", value: "Apple Wallet, Google Pay, Samsung Pay" },
-  { label: "Key Outcome", value: "Multi-SDK Suite" }
-]}>
-Unit is the banking-as-a-service platform that lets companies embed powerful financial features into their product. They needed multiple native mobile SDKs for their clients, comprehensive implementation guides, and hands-on integration support. A key challenge was building a Mobile SDK for adding Unit credit cards to Apple Wallet, Google Pay, and Samsung Pay using Visa's push provisioning — a highly regulated, technically complex integration.
-</Challenge>
+## About
 
-<Partnership>
-Working in a highly regulated financial environment demands precision and deep technical trust. Applift's engineers embedded into Unit's mobile workflow, collaborating closely with their backend and compliance teams to navigate Visa's push provisioning requirements — a process with zero margin for error.
+Unit is the banking-as-a-service platform that lets companies embed powerful financial features directly into their products. Its white-label UIs provide pre-built, customizable components for banking features, allowing Unit's clients to build in minutes and launch in weeks.
 
-The team brought hands-on integration support to Unit's own clients, helping them adopt the SDKs successfully. This wasn't just about building tools; it was about ensuring every downstream integration worked flawlessly in a space where reliability and compliance are non-negotiable.
-</Partnership>
+## Native SDK Engineering
 
-<Solution clientInfo={{ description: "Unit is the banking-as-a-service platform that lets companies embed powerful financial features into their product.", websiteUrl: "https://unit.co" }}>
+We are the mobile team behind Unit's client-facing SDKs, working in lockstep with Unit's internal web team. Applift owns the native mobile surface area end-to-end: architecture, development, and ongoing evolution. These SDKs are shipped inside the production apps of Unit's clients.
 
-**Native Mobile SDK Development**
+* **Architecture & Development:** We lead the technical architecture and implementation of the iOS SDK in Swift and the Android SDK in Kotlin, with a focus on a lightweight footprint, strict API boundaries, and the reliability required for financial services.
+* **Digital Wallet Provisioning:** We built push-provisioning flows that issue cards directly into **Apple Wallet**, **Google Pay**, and **Samsung Pay** via **Visa push provisioning**, handling the platform-specific cryptography, entitlements, and certification requirements each wallet demands.
+* **DevOps & Distribution:** We own the full release pipeline, from automated testing and versioning to binary distribution, so Unit's clients receive stable, well-tagged releases they can integrate with confidence.
+* **Developer Experience:** We treat the SDKs as a product for developers. Public APIs, error surfaces, and sample code are designed for fast, unambiguous integration into client applications.
 
-Multiple production-grade mobile SDKs enabling Unit's clients to embed banking features into their applications.
+## Cross-Platform SDK (React Native)
 
-**Digital Wallet Integration**
+Alongside the native work, we are building a React Native SDK that wraps the underlying iOS and Android implementations. Cross-platform client teams get the same production-grade banking features, including digital wallet provisioning, through an idiomatic React Native surface, without us forking the business logic across stacks.
 
-Dedicated SDK for Apple Wallet, Google Pay, and Samsung Pay using Visa push provisioning technology.
+  <ImageCarousel
+     items={[
+      { src: '/img/success-stories/unit/unit-whitelabel-1.png', alt: 'Unit white label 1' },
+      { src: '/img/success-stories/unit/unit-whitelabel-2.png', alt: 'Unit white label 2' },
+      { src: '/img/success-stories/unit/unit-whitelabel-3.png', alt: 'Unit white label 3' },
+    ]}
+   />
 
-**Client Integration Support**
+## Partnering with Unit's Clients
 
-Comprehensive implementation guides and hands-on support throughout the integration process.
+Our scope extends beyond building the SDKs. For each SDK, we write the implementation guide that Unit's clients use to integrate, and we work directly with those client teams during the integration itself. When a client hits a platform edge case or a question the documentation doesn't cover, we are the engineers on the other end. In practice, we operate as an extension of Unit's platform team for downstream developer enablement.
 
-**Cross-Platform Delivery**
+## The Ongoing Partnership
 
-Consistent SDK behavior and reliability across iOS and Android in a highly regulated financial environment.
-</Solution>
+The engagement with Unit is live and expanding. We continue to develop and evolve the iOS, Android, and React Native SDKs in parallel, adding capabilities as Unit's platform grows and supporting new client integrations as they come online.
 
-{/* <ImageGallery images={[
-  { src: "/img/success-stories/unit-screen-1.png", alt: "Unit SDK integration" },
-  { src: "/img/success-stories/unit-screen-2.png", alt: "Digital wallet provisioning" }
-]} /> */}
-
-<ImpactMetrics metrics={[
-  { value: "3", label: "Wallet Platforms", description: "Apple Wallet, Google Pay, and Samsung Pay provisioning via a single SDK." },
-  { value: "2", label: "Native SDKs", description: "Production-grade iOS and Android SDKs used by Unit's growing client base." },
-  { value: "100%", label: "Visa Compliance", description: "Fully compliant push provisioning implementation in a regulated financial environment." }
-]} />
-
-{/* <Testimonial
-  quote="Quote from Unit stakeholder about Applift's contribution."
-  name="Stakeholder Name"
-  role="Role, Unit"
-  image="/img/testimonials/unit.jpg"
-/> */}
+Applift serves as Unit's mobile team, operating alongside Unit's internal web team with full ownership of the mobile SDK surface area. The partnership continues to deepen across all three platforms.

@@ -1,11 +1,14 @@
 /*
  * ImageGallery — responsive image grid for story pages.
  *
+ * Supports images and videos. Video files (.mp4, .webm, .ogg) are auto-detected
+ * and rendered as muted, auto-playing, looping inline videos.
+ *
  * Basic grid (2 or 3 columns):
  *   <ImageGallery
  *     images={[
  *       { src: '/img/screen1.png', alt: 'Dashboard view', caption: 'Optional caption' },
- *       { src: '/img/screen2.png', alt: 'Settings panel' },
+ *       { src: '/img/demo.mp4', alt: 'Feature demo' },
  *     ]}
  *     columns={2}
  *   />
@@ -50,16 +53,30 @@ interface ImageGalleryProps {
   width?: number;
 }
 
+const VIDEO_EXTS = /\.(mp4|webm|ogg)(\?.*)?$/i;
+
 function GalleryFigure({ img, centered = false }: { img: GalleryImage; centered?: boolean }): React.JSX.Element {
   const resolved = useBaseUrl(img.src);
+  const isVideo = VIDEO_EXTS.test(img.src);
   return (
     <figure className={centered ? styles.figureCentered : styles.figure}>
-      <img
-        src={resolved}
-        alt={img.alt}
-        className={centered ? styles.imageCentered : styles.image}
-        loading="lazy"
-      />
+      {isVideo ? (
+        <video
+          src={resolved}
+          className={centered ? styles.imageCentered : styles.image}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      ) : (
+        <img
+          src={resolved}
+          alt={img.alt}
+          className={centered ? styles.imageCentered : styles.image}
+          loading="lazy"
+        />
+      )}
       {img.caption && (
         <figcaption className={styles.caption}>{img.caption}</figcaption>
       )}

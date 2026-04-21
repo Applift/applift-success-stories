@@ -107,7 +107,7 @@ Stories can follow one of two layouts:
 | `InlineQuote` | `quote`, `name`, `role`, `image?` | Subtle left-bar pull-quote placed contextually between sections |
 | `PullQuote` | `quote`, `name?`, `role?`, `image?` | Large, centered editorial quote with top/bottom rule — used for opening/closing statements |
 | `Solution` | `children` (MDX), `clientInfo` (`{description, websiteUrl?}`) | Solution details with bold subheadings + "About the Client" sidebar card |
-| `ImageGallery` | `images` (`{src, alt, caption?}[]`), `columns?` (2\|3), `featuredFirst?`, `heading?` (`string\|null`) | Responsive image grid; `featuredFirst` renders the first image as a hero with the rest in a grid below |
+| `ImageGallery` | `images` (`{src, alt, caption?}[]`), `columns?` (2\|3), `featuredFirst?`, `heading?` (`string\|null`) | Responsive image/video grid; `.mp4`/`.webm`/`.ogg` srcs auto-render as muted, looping inline videos. `featuredFirst` renders the first item as a hero with the rest in a grid below |
 | `Timeline` | `phases` (`{title, description}[]`), `variant?` (`'vertical'\|'horizontal'`), `heading?` | Stepped project timeline — vertical with connector line or horizontal card grid |
 | `ImpactMetrics` | `metrics` (`{value, label, description?}[]`) | Metric cards with large numbers, labels, and descriptions |
 | `Testimonial` | `quote`, `name`, `role`, `image?` | (Deprecated) Quote with circular avatar; use `InlineQuote` or `PullQuote` for new stories |
