@@ -125,3 +125,8 @@
 .hash-link {
   display: none !important;
 }
+
+/* Hide mobile navbar hamburger toggle — no sidebar nav on this site */
+.navbar__toggle {
+  display: none !important;
+}
