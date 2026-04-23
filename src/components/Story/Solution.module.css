@@ -1,5 +1,5 @@
 .section {
-  margin: 3rem 0;
+  margin: var(--ss-section-gap) 0;
 }
 
 .layout {
@@ -15,7 +15,7 @@
 
 .heading {
   font-family: 'Manrope', sans-serif;
-  font-size: 1.75rem;
+  font-size: var(--ss-heading-section);
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--ss-text-primary);

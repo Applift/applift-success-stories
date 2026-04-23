@@ -1,5 +1,5 @@
 .section {
-  margin: 3rem 0;
+  margin: var(--ss-section-gap) 0;
   padding: 3.5rem 2rem;
   background: var(--ss-summary-bg);
   border-radius: 16px;

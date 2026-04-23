@@ -81,7 +81,7 @@
   max-height: 400px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .topRow {
     flex-direction: column;
     align-items: flex-start;

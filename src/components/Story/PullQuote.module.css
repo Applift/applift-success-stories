@@ -70,7 +70,7 @@
   color: var(--ss-text-muted);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .section {
     padding: 2rem 1.25rem 1.5rem;
     margin: 2.5rem auto;

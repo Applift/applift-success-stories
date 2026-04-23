@@ -1,10 +1,10 @@
 .section {
-  margin: 3.5rem 0;
+  margin: var(--ss-section-gap) 0;
 }
 
 .heading {
   font-family: 'Manrope', sans-serif;
-  font-size: 1.75rem;
+  font-size: var(--ss-heading-section);
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--ss-text-primary);
@@ -147,7 +147,7 @@
   margin: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .horizontal {
     grid-template-columns: 1fr;
   }

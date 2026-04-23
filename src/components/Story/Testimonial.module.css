@@ -15,8 +15,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--ss-outline-variant);
   background: var(--ss-card-bg);
@@ -76,17 +76,26 @@
   display: flex;
   gap: 0.375rem;
   margin-bottom: 1rem;
+  margin-left: -0.5rem;
 }
 
 .dot {
+  position: relative;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   border: none;
   padding: 0;
+  margin: 0.5rem;
   background: var(--ss-outline-variant);
   cursor: pointer;
   transition: background 0.15s;
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  inset: -0.5rem;
 }
 
 .dotActive {
@@ -123,7 +132,7 @@
   margin-top: 0.25rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .layout {
     flex-direction: column;
     gap: 1rem;
@@ -132,10 +141,5 @@
   .avatar {
     width: 64px;
     height: 64px;
-  }
-
-  .navBtn {
-    width: 30px;
-    height: 30px;
   }
 }
