@@ -40,7 +40,6 @@ export default function SuccessStories(): React.JSX.Element {
             ))}
           </div>
         </main>
-        <TestimonialSection />
       </div>
     </Layout>
   );
