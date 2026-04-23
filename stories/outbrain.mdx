@@ -3,7 +3,7 @@ title: Outbrain
 description: Outbrain's Smartfeed Mobile SDK.
 tags: [iOS, Android, React Native]
 general_tags: [iOS, Android, Cross-Platform]
-hero_image: /img/success-stories/outbrain.png
+hero_image: /img/success-stories/outbrain_new.png
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -13,59 +13,25 @@ pagination_prev: null
   title="Outbrain"
   description="Building and maintaining the Smartfeed Mobile SDK powering content recommendations in top-tier publisher apps worldwide."
   tags={["iOS", "Android", "React Native"]}
-  heroImage="/img/success-stories/outbrain.png"
+  heroImage="/img/success-stories/outbrain_new.png"
 />
 
-<ExecutiveSummary>
-The Smartfeed Mobile SDK enables Outbrain to deliver **personalized content recommendations** to millions of users across the world's leading publisher apps, including **CNN, Sky News, and ESPN**.
+<ExecutiveSummary
+  sector="Content Recommendations"
+  platforms={["iOS", "Android", "React Native"]}
+  websiteUrl="https://www.outbrain.com"
+>
+We build and maintain Outbrain's Smartfeed Mobile SDK across iOS, Android, and React Native - the layer that fetches and renders Outbrain's content recommendations inside publisher apps.
 </ExecutiveSummary>
 
-<Challenge glanceItems={[
-  { label: "Platforms", value: "iOS, Android, React Native" },
-  { label: "Publishers", value: "CNN, Sky News, ESPN" },
-  { label: "Key Outcome", value: "Global SDK Reach" }
-]}>
-Outbrain is a leading recommendation platform for the open web, enabling one-third of the world's online consumers to discover content through recommendation feeds. The Smartfeed Mobile SDK needed to fetch and render content recommendations inside top-tier publisher applications with low latency, high reliability, and a flexible integration layer that works across diverse publisher tech stacks.
-</Challenge>
+## About
 
-<Partnership>
-Building an SDK that runs inside top-tier publisher apps like CNN and ESPN requires a different kind of accountability — every performance regression or crash is felt by millions of users. Applift's engineers worked within Outbrain's mobile team with that level of ownership, treating the SDK as if it were their own product.
+Outbrain is a leading recommendation platform for the open web. Its technology enables one-third of the world's online consumers to discover new things through recommendation feeds on their favorite media, and connects advertisers to those audiences.
 
-The collaboration was hands-on and iterative: working closely with Outbrain's product and backend teams to optimize recommendation fetching, minimize latency, and ensure the SDK integrated smoothly across diverse publisher tech stacks without disrupting existing app experiences.
-</Partnership>
+## Smartfeed Mobile SDK
 
-<Solution clientInfo={{ description: "Outbrain is a leading recommendation platform for the open web, enabling one-third of the world's online consumers to discover content.", websiteUrl: "https://outbrain.com" }}>
+The Smartfeed Mobile SDK is the mobile surface of Outbrain's recommendation platform. It fetches and displays personalized content recommendations directly within the content of publisher apps, reaching readers inside titles like CNN, Sky News, ESPN, and many more.
 
-**Mobile SDK Development**
+Our work spans all three client platforms - iOS, Android, and React Native - with a consistent API and behavior across each, so publishers get the same integration experience regardless of the stack they ship on.
 
-Building and maintaining the Smartfeed Mobile SDK that powers content recommendations inside top-tier publisher applications.
-
-**Publisher Integration**
-
-Flexible integration layer allowing publishers like CNN, Sky News, and ESPN to seamlessly embed recommendations.
-
-**Performance Optimization**
-
-Low-latency recommendation fetching and rendering for a smooth, non-intrusive user experience.
-
-**Cross-Platform Delivery**
-
-Native SDK implementations for iOS and Android with consistent behavior and reliability across platforms.
-</Solution>
-
-{/* <ImageGallery images={[
-  { src: "/img/success-stories/outbrain-screen-1.png", alt: "Outbrain Smartfeed in publisher app" }
-]} /> */}
-
-<ImpactMetrics metrics={[
-  { value: "1/3", label: "Global Web Users", description: "Outbrain reaches one-third of the world's online consumers through recommendation feeds." },
-  { value: "3", label: "Platform SDKs", description: "Native iOS, Android, and React Native SDKs with consistent behavior and reliability." },
-  { value: "Top-Tier", label: "Publisher Reach", description: "Powering recommendations in apps like CNN, Sky News, ESPN and many more." }
-]} />
-
-{/* <Testimonial
-  quote="Quote from Outbrain stakeholder about Applift's contribution."
-  name="Stakeholder Name"
-  role="Role, Outbrain"
-  image="/img/testimonials/outbrain.jpg"
-/> */}
+A full CI release pipeline publishes tagged, verified builds to the package managers publishers integrate with - CocoaPods and Swift Package Manager for iOS, Maven for Android, and NPM for React Native.
