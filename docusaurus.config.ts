@@ -71,8 +71,15 @@ const config: Config = {
       logo: {
         alt: 'Applift Consulting Logo',
         src: 'img/logo.png',
+        href: 'https://www.applift-consulting.com/',
+        target: '_blank',
       },
-      items: [],
+      items: [
+        {
+          type: 'custom-BackToProjects',
+          position: 'right',
+        },
+      ],
     },
     footer: {
       style: 'dark',

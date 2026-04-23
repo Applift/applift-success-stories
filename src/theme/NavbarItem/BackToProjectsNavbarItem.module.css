@@ -1,0 +1,17 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.1rem;
+  color: var(--ifm-navbar-link-color);
+  background: transparent;
+  text-decoration: none;
+  border-radius: var(--ss-border-radius-btn);
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  color: var(--ifm-navbar-link-color);
+  background: var(--ss-surface-container-low);
+  text-decoration: none;
+}
