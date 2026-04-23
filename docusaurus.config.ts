@@ -72,7 +72,7 @@ const config: Config = {
         alt: 'Applift Consulting Logo',
         src: 'img/logo.png',
         href: 'https://www.applift-consulting.com/',
-        target: '_blank',
+        target: '_self',
       },
       items: [
         {
