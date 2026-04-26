@@ -34,4 +34,30 @@ The Smartfeed Mobile SDK is the mobile surface of Outbrain's recommendation plat
 
 Our work spans all three client platforms - iOS, Android, and React Native - with a consistent API and behavior across each, so publishers get the same integration experience regardless of the stack they ship on.
 
-A full CI release pipeline publishes tagged, verified builds to the package managers publishers integrate with - CocoaPods and Swift Package Manager for iOS, Maven for Android, and NPM for React Native.
+<ProjectHighlights highlights={[
+  {
+    title: "Native foundations",
+    description: "Built on Kotlin for Android and Objective-C / Swift for iOS, with first-class integration into RecyclerView, UITableView, and UICollectionView. A WebView-based integration option is available for hybrid surfaces, with full viewability tracking preserved inside the WebView."
+  },
+  {
+    title: "Viewability tracking",
+    description: "Measures the visible percentage of any component in real time and monitors scroll position continuously, giving publishers and advertisers accurate exposure signals across native and WebView surfaces."
+  },
+  {
+    title: "Monetization",
+    description: "Beyond editorial recommendations, the SDK supports monetization formats - including video ads rendered above existing recommendations within the feed."
+  },
+  {
+    title: "CI/CD release pipeline",
+    description: "A full CI/CD pipeline publishes tagged, verified builds directly to the package managers publishers integrate with - CocoaPods and Swift Package Manager for iOS, Maven Central for Android, and NPM for React Native."
+  }
+]} />
+
+<ImageGallery
+  columns={2}
+  images={[
+    { src: "/vid/outbrain/outbrain-video-ad.mp4", alt: "Smartfeed video ad in feed", caption: "Video ad rendered above the recommendation feed." },
+    { src: "/vid/outbrain/outbrain-read-more.mp4", alt: "Smartfeed Read More reveal", caption: "Read More reveals the Smartfeed at the earliest viable point." }
+  ]}
+  width="75"
+/>
