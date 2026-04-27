@@ -134,3 +134,12 @@
 .navbar__toggle {
   display: none !important;
 }
+
+/* Pull breadcrumb flush with the logo (remove default brand trailing margin) */
+.navbar__brand {
+  margin-right: 0;
+}
+
+.navbar__logo {
+  margin-right: 0;
+}

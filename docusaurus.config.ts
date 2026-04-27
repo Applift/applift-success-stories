@@ -77,7 +77,7 @@ const config: Config = {
       items: [
         {
           type: 'custom-BackToProjects',
-          position: 'right',
+          position: 'left',
         },
       ],
     },
