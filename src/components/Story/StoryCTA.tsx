@@ -29,8 +29,8 @@ function GoogleCalendarIcon(): React.JSX.Element {
 }
 
 export default function StoryCTA({
-  title = 'Have a project in mind?',
-  description = "Let's talk about how Applift can help you bring it to life - from architecture to App Store delivery.",
+  title = "Let's bring your idea to life.",
+  description = "From architecture to App Store delivery, Applift turns ideas into shipped products.",
 }: StoryCTAProps): React.JSX.Element {
   return (
     <section className={styles.section}>
