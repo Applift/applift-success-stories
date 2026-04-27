@@ -13,6 +13,7 @@ import PullQuote from '@site/src/components/Story/PullQuote';
 import Timeline from '@site/src/components/Story/Timeline';
 import ProjectHighlights from '@site/src/components/Story/ProjectHighlights';
 import IntegrationEcosystem from '@site/src/components/Story/IntegrationEcosystem';
+import StoryCTA from '@site/src/components/Story/StoryCTA';
 
 export default {
   ...MDXComponents,
@@ -30,4 +31,5 @@ export default {
   Testimonial,
   ProjectHighlights,
   IntegrationEcosystem,
+  StoryCTA,
 };

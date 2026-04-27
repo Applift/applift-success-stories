@@ -111,6 +111,7 @@ Stories can follow one of two layouts:
 | `Timeline` | `phases` (`{title, description}[]`), `variant?` (`'vertical'\|'horizontal'`), `heading?` | Stepped project timeline — vertical with connector line or horizontal card grid |
 | `ImpactMetrics` | `metrics` (`{value, label, description?}[]`) | Metric cards with large numbers, labels, and descriptions |
 | `Testimonial` | `quote`, `name`, `role`, `image?` | (Deprecated) Quote with circular avatar; use `InlineQuote` or `PullQuote` for new stories |
+| `StoryCTA` | `title?`, `description?` | Closing CTA banner (dark navy) with hardcoded contact details (phone/email/LinkedIn) and a "Book a Call" button. Appears at the bottom of every story |
 
 ## Key Details
 

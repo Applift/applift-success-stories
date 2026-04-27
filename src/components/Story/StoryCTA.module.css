@@ -1,0 +1,131 @@
+.section {
+  /* Break out of the 960px story container — full bleed */
+  position: relative;
+  z-index: 0;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  margin-top: clamp(3rem, 8vw, 5rem);
+  margin-bottom: 0;
+  background: #303846;
+  color: #ebedf0;
+  padding: 0 clamp(1.25rem, 5vw, 3rem) 1.5rem;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: #303846;
+}
+
+.inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+.description {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 2.5rem;
+  max-width: 60ch;
+}
+
+.contacts {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2.5rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--ss-transition);
+}
+
+.contact a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  flex-shrink: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #ffffff;
+  color: #111c2d;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  padding: 1.125rem 2rem;
+  border-radius: var(--ss-border-radius-btn);
+  transition: transform var(--ss-transition), box-shadow var(--ss-transition);
+  white-space: nowrap;
+}
+
+.button:hover {
+  color: #111c2d;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
