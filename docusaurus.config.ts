@@ -16,7 +16,7 @@ const config: Config = {
 
   // Set the production url of your site here
   url: 'https://applift.github.io',
-  baseUrl: '/applift-success-stories/',
+  baseUrl: '/',
 
   organizationName: 'Applift',
   projectName: 'applift-success-stories',
