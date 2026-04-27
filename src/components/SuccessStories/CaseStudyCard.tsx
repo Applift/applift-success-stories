@@ -11,33 +11,36 @@ export default function CaseStudyCard({
   study,
 }: CaseStudyCardProps): React.JSX.Element {
   return (
-    <article
-      className={styles.card}
+    <Link
+      to={study.link}
+      className={styles.cardLink}
       aria-label={`${study.clientName} — ${study.tags.join(', ')}`}
     >
-      <div className={styles.cardImageWrap}>
-        <img
-          className={styles.cardImage}
-          src={study.heroImage}
-          alt={`${study.clientName} project screenshot`}
-          loading="lazy"
-        />
-      </div>
-      <div className={styles.cardBody}>
-        <div className={styles.tagList}>
-          {study.tags.map((tag) => (
-            <span key={tag} className={styles.tag}>{tag}</span>
-          ))}
+      <article className={styles.card}>
+        <div className={styles.cardImageWrap}>
+          <img
+            className={styles.cardImage}
+            src={study.heroImage}
+            alt={`${study.clientName} project screenshot`}
+            loading="lazy"
+          />
         </div>
-        <h3 className={styles.clientName}>{study.clientName}</h3>
-        <p className={styles.summary}>{study.summary}</p>
-        <Link className={styles.readMore} to={study.link}>
-          Read More{' '}
-          <span className={styles.readMoreArrow} aria-hidden="true">
-            &rarr;
-          </span>
-        </Link>
-      </div>
-    </article>
+        <div className={styles.cardBody}>
+          <div className={styles.tagList}>
+            {study.tags.map((tag) => (
+              <span key={tag} className={styles.tag}>{tag}</span>
+            ))}
+          </div>
+          <h3 className={styles.clientName}>{study.clientName}</h3>
+          <p className={styles.summary}>{study.summary}</p>
+          <div className={styles.readMore} aria-hidden="true">
+            Read More{' '}
+            <span className={styles.readMoreArrow}>
+              &rarr;
+            </span>
+          </div>
+        </div>
+      </article>
+    </Link>
   );
 }
