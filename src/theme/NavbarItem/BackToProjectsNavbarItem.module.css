@@ -5,18 +5,22 @@
   font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
   min-width: 0;
+  flex: 1;
 }
 
 .separator {
   color: var(--ifm-color-emphasis-500);
   font-size: 1.25rem;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .link {
   color: var(--ifm-navbar-link-color);
   text-decoration: none;
   transition: color 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .link:hover {
@@ -31,15 +35,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 28ch;
+  min-width: 0;
+  flex: 1;
 }
 
 @media (max-width: 768px) {
   .breadcrumb {
     gap: 0.35rem;
-  }
-
-  .current {
-    max-width: 14ch;
   }
 }
