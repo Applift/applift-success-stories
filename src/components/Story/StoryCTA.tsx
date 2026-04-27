@@ -6,11 +6,11 @@ interface StoryCTAProps {
   description?: string;
 }
 
-const PHONE = '+972 50-000-0000';
-const PHONE_HREF = 'tel:+972500000000';
-const EMAIL = 'hello@applift.io';
-const LINKEDIN_URL = 'https://www.linkedin.com/company/applift';
-const LINKEDIN_LABEL = 'linkedin.com/company/applift';
+const PHONE = '+972 54-5556742';
+const PHONE_HREF = 'tel:+972545556742';
+const EMAIL = 'alon@applift-consulting.com';
+const LINKEDIN_URL = 'https://www.linkedin.com/company/applift-consulting';
+const LINKEDIN_LABEL = 'linkedin.com/company/applift-consulting';
 const BOOK_A_CALL_URL = 'https://calendar.app.google/HSkhcnShesmiGGvG8';
 
 function GoogleCalendarIcon(): React.JSX.Element {
@@ -38,43 +38,47 @@ export default function StoryCTA({
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>
 
-        <ul className={styles.contacts}>
-          <li className={styles.contact}>
-            <span className={styles.icon} aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-            </span>
-            <a href={PHONE_HREF}>{PHONE}</a>
-          </li>
-          <li className={styles.contact}>
-            <span className={styles.icon} aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-            </span>
-            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          </li>
-          <li className={styles.contact}>
-            <span className={styles.icon} aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
-              </svg>
-            </span>
-            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{LINKEDIN_LABEL}</a>
-          </li>
-        </ul>
+        <div className={styles.columns}>
+          <ul className={styles.contacts}>
+            <li className={styles.contact}>
+              <span className={styles.icon} aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </span>
+              <a href={PHONE_HREF}>{PHONE}</a>
+            </li>
+            <li className={styles.contact}>
+              <span className={styles.icon} aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </span>
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            </li>
+            <li className={styles.contact}>
+              <span className={styles.icon} aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                </svg>
+              </span>
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{LINKEDIN_LABEL}</a>
+            </li>
+          </ul>
 
-        <a
-          className={styles.button}
-          href={BOOK_A_CALL_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GoogleCalendarIcon />
-          Book a Call
-        </a>
+          <div className={styles.buttonWrap}>
+            <a
+              className={styles.button}
+              href={BOOK_A_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GoogleCalendarIcon />
+              Book a Call
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
