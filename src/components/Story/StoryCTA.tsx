@@ -29,8 +29,8 @@ function GoogleCalendarIcon(): React.JSX.Element {
 }
 
 export default function StoryCTA({
-  title = "Looking for your TECHNICAL partner?",
-  description = "We build, scale, and maintain the mobile and full-stack systems that power your growth.",
+  title = "Let's talk",
+  description = "A leading Israeli tech partner, for building products that stays ahead.",
 }: StoryCTAProps): React.JSX.Element {
   return (
     <section className={styles.section}>
