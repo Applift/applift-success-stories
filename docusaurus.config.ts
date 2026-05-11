@@ -76,6 +76,10 @@ const config: Config = {
       {
         docs: false,
         blog: false,
+        gtag: {
+          trackingID: 'G-MH9XFTWPFC',
+          anonymizeIP: true,
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
