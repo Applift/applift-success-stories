@@ -5,10 +5,12 @@ import styles from '../../pages/index.module.css';
 
 interface CaseStudyCardProps {
   study: CaseStudy;
+  eager?: boolean;
 }
 
 export default function CaseStudyCard({
   study,
+  eager = false,
 }: CaseStudyCardProps): React.JSX.Element {
   return (
     <Link
@@ -22,7 +24,8 @@ export default function CaseStudyCard({
             className={styles.cardImage}
             src={study.heroImage}
             alt={`${study.clientName} project screenshot`}
-            loading="lazy"
+            loading={eager ? 'eager' : 'lazy'}
+            fetchPriority={eager ? 'high' : 'auto'}
           />
         </div>
         <div className={styles.cardBody}>
