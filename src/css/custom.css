@@ -74,8 +74,6 @@
   --ss-summary-text: #e0e4f0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
 /* ===== Story doc page styles ===== */
 .docs-doc-page [class*='docItemContainer'] {
   max-width: 960px;

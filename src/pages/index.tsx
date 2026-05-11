@@ -4,7 +4,7 @@ import { useSuccessStories } from '@site/src/hooks/useSuccessStories';
 import HeroSection from '@site/src/components/SuccessStories/HeroSection';
 import FilterBar from '@site/src/components/SuccessStories/FilterBar';
 import CaseStudyCard from '@site/src/components/SuccessStories/CaseStudyCard';
-import TestimonialSection from '@site/src/components/SuccessStories/TestimonialSection';
+import StoryCTA from '@site/src/components/Story/StoryCTA';
 import styles from './index.module.css';
 
 export default function SuccessStories(): React.JSX.Element {
@@ -35,10 +35,11 @@ export default function SuccessStories(): React.JSX.Element {
         <FilterBar tags={allTags} active={activeFilter} onFilter={setActiveFilter} />
         <main className={styles.gridSection}>
           <div className={styles.cardGrid}>
-            {filtered.map((study) => (
-              <CaseStudyCard key={study.slug} study={study} />
+            {filtered.map((study, index) => (
+              <CaseStudyCard key={study.slug} study={study} eager={index === 0} />
             ))}
           </div>
+          <StoryCTA />
         </main>
       </div>
     </Layout>
